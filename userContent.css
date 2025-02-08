@@ -1,0 +1,20 @@
+/*  */
+@import url("");
+@import url("");
+@import url("");
+@import url("");
+/* Sidebar */
+@import url("sidebery/sidebar.css");
+@import url("content/autohide-sidebar.css");
+/*  */
+@import url("tweaks/popup-search.css");
+@import url("content/common.css");
+
+
+
+:root {
+--tweak-urlbar-rounding: 100px;
+}
+
+.activity-stream .search-handoff-button, .showPrivate .search-handoff-button {
+  border-radius: var(--tweak-urlbar-rounding) !important;

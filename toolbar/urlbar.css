@@ -1,11 +1,26 @@
 /*urlbar stuff*/
 @media (-moz-bool-pref:"af.edgyarc.centered-url") {
-#urlbar:not([breakout][breakout-extend]) {
-    #urlbar-input {
-    text-align:center !important;
-    }
-   
-    }
+/* Ensure Popover is Visible */
+#urlbar[open], .urlbarView {
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Fix Positioning */
+.urlbarView {
+    position: absolute !important;
+    top: 70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 420px !important;
+    max-width: 75vw !important;
+    background: rgba(25, 25, 25, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 14px !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3) !important;
+    z-index: 9999 !important;
+    padding: 12px !important;
 }
 
 #urlbar:not([breakout][breakout-extend]) {    

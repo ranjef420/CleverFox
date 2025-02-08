@@ -1,0 +1,212 @@
+/* ---------------------------------------- */
+        /* Merged Popup URL Bar Config */
+/* ---------------------------------------- */
+
+#urlbar {                       /* Centered URL Bar when collapsed */
+    width: 100% !important;
+    height: 28px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#urlbar-input {
+    font-size: 14px !important;
+    height: 28px !important;
+}
+
+#urlbar-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* ---------------------------------------- */
+            /* Expanded URL Bar */
+/* ---------------------------------------- */
+
+#urlbar.expanded {
+    width: 100% !important;     /* Full width when expanded */
+    height: 40px !important;    /* Increased height for better input visibility */
+    background-color: var(--background-color-light) !important;     /* Light background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;    /* Shadow for depth */
+    border-radius: 10px !important;     /* Rounded corners */
+    transition: all 0.45s ease-out !important;  /* Smooth transition for expansion */
+}
+
+#urlbar:focus {
+    width: 100% !important;
+    height: 34px !important;    /* Expanded height */
+    background-color: var(--background-color-light) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 8px !important;
+    outline: none !important;   /* Remove default outline */
+    box-shadow: 0 0 12px rgba(0, 0, 255, 0.5) !important;   /* Focus highlight */
+}
+
+/* ---------------------------------------- */
+        /* Icon Size and Alignment  */
+/* ---------------------------------------- */
+
+#urlbar-input, #urlbar-container {
+    padding-left: 12px !important;      /* Padding for input field */
+    padding-right: 12px !important;     /* Padding for input field */
+}
+
+#urlbar-input[type="url"] {
+    font-size: 16px !important;         /* Increase size for better readability */
+}
+
+#identity-icon-box, #tracking-protection-icon-container {
+    height: 20px !important;            /* Icon height adjustments */
+    margin-top: 5px !important;         /* Ensure icons align properly */
+}
+
+#urlbar-input::-webkit-search-cancel-button {
+    height: 20px !important;            /* Adjust cancel button size */
+    width: 20px !important;
+}
+
+/* ---------------------------------------- */
+    /* Popup URL Bar with Translucency */
+/* ---------------------------------------- */
+
+#urlbar-popup {
+    position: absolute !important;
+    top: 20px !important;
+    left: 10% !important;
+    width: calc(100vw - 20%) !important;
+    max-width: 90% !important;
+    height: auto !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 12px !important;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25) !important;
+    z-index: 10 !important;
+}
+
+/* ---------------------------------------- */
+    /* Popover URL Bar Background Blur  */
+/* ---------------------------------------- */
+
+#urlbar[breakout-extend]::before {
+    content: '' !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    pointer-events: none !important;
+    background: color-mix(in srgb, var(--toolbar-field-focus-background-color) 65%, rgba(0, 0, 0, 0)) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 5 !important;
+}
+
+/* ---------------------------------------- */
+        /* Transitions for URL Bar */
+/* ---------------------------------------- */
+
+#urlbar, #urlbar-input, #urlbar-popup {
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ---------------------------------------- */
+/* URL Bar Popover and Expand Animation */
+/* ---------------------------------------- */
+
+#urlbar-container {
+    transition: opacity 0.5s ease-in-out, width 0.5s ease !important;
+}
+
+/* ---------------------------------------- */
+        /* Focus and Border Styling */
+/* ---------------------------------------- */
+
+#urlbar:focus {
+    outline: none !important;       /* Remove default outline */
+    box-shadow: 0 0 12px rgba(0, 0, 255, 0.5) !important;       /* Focus highlight */
+    background-color: var(--background-color-light-focus) !important;   /* Background change on focus */
+}
+
+#urlbar:hover {                                                         /* Hover effect for the URL bar */
+    background-color: var(--background-color-light-hover) !important;   /* Hover effect for better interactivity */
+}
+
+/* ---------------------------------------- */
+/* Icon Hover Effects in Expanded URL Bar */
+/* ---------------------------------------- */
+
+#urlbar.expanded #identity-icon-box,
+#urlbar.expanded #tracking-protection-icon-container,
+#urlbar.expanded #urlbar-buttons {
+    transition: transform 0.3s ease, color 0.3s ease !important; /* Smooth transition for icons */
+}
+
+#urlbar.expanded #identity-icon-box:hover,
+#urlbar.expanded #tracking-protection-icon-container:hover,
+#urlbar.expanded #urlbar-buttons:hover {
+    transform: scale(1.2) !important; /* Slightly enlarge icons on hover */
+    color: var(--highlight-color) !important; /* Change icon color on hover */
+}
+
+/* ---------------------------------------- */
+/* Border Radius Adjustment on Focus */
+/* ---------------------------------------- */
+
+#urlbar:focus,
+#urlbar.expanded:focus {
+    border-radius: 12px !important; /* Apply rounded corners when focused */
+}
+
+/* ---------------------------------------- */
+            /* Button Style */
+/* ---------------------------------------- */
+#urlbar-background, #urlbar-buttons {
+    border-radius: 8px !important;      /* Button rounded corners */
+    padding: 6px !important;            /* Padding for buttons */
+}
+
+/* ---------------------------------------- */
+    /* Hover & Expanded when Collapsed */
+/* ---------------------------------------- */
+
+#urlbar:hover {     /* Hover effect for better interactivity */
+    background-color: var(--background-color-light-hover) !important;
+}
+
+/* ---------------------------------------- */
+        /* Icon Size and Alignment */
+/* ---------------------------------------- */
+
+#urlbar-input, #urlbar-container {
+    padding-left: 12px !important;      /* Padding for input field */
+    padding-right: 12px !important;     /* Padding for input field */
+}
+
+#urlbar-input[type="url"] {
+    font-size: 16px !important;         /* Increase size for better readability */
+}
+
+/* ---------------------------------------- */
+        /* Media Queries for Mobile */
+/* ---------------------------------------- */
+
+@media (max-width: 768px) {
+    #urlbar {
+        width: 90% !important;      /* Slightly smaller width */
+        height: 30px !important;    /* Slightly smaller height */
+    }
+
+    #urlbar-popup {
+        width: 80% !important;      /* Even smaller */
+    }
+
+    #urlbar-container {
+        width: 100% !important;     /* Full width */
+    }
+}
+
+@media (max-width: 480px) {
+    #urlbar.expanded {
+        width: 95% !important;      /* Smaller width on very small screens */
+        height: 38px !important;    /* Adjusted expanded height */
+    }
+}

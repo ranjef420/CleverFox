@@ -2,8 +2,8 @@
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar {
-  margin-bottom: var(--uc-tweak-rounded-corners-padding) !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  margin-bottom: var(--rj-tweak-rounded-corners-padding) !important;
+  background-color: rgba(78, 3, 153, 1) !important;
   backdrop-filter: blur(12px) !important;
   border-radius: 8px !important;
 }
@@ -19,16 +19,16 @@
 }
 
 #sidebar-box {
-  --uc-sidebar-width: 10px !important;
-  --uc-sidebar-hover-width: 220px !important; /* Slightly wider hover effect */
-  --uc-autohide-sidebar-delay: 200ms !important;
-  --uc-autohide-transition-duration: 115ms;
-  --uc-autohide-transition-type: ease-in-out;
+  --rj-sidebar-width: 10px !important;
+  --rj-sidebar-hover-width: 220px !important; /* Slightly wider hover effect */
+  --rj-autohide-sidebar-delay: 200ms !important;
+  --rj-autohide-transition-duration: 115ms;
+  --rj-autohide-transition-type: ease-in-out;
   
   position: relative;
-  min-width: var(--uc-sidebar-width) !important;
-  width: var(--uc-sidebar-width) !important;
-  max-width: var(--uc-sidebar-width) !important;
+  min-width: var(--rj-sidebar-width) !important;
+  width: var(--rj-sidebar-width) !important;
+  max-width: var(--rj-sidebar-width) !important;
 
   background-color: transparent !important;
   backdrop-filter: blur(12px) !important;
@@ -49,8 +49,8 @@
 
 #sidebar-box:hover > #sidebar-header,
 #sidebar-box:hover > #sidebar {
-  margin-inline-start: calc(var(--uc-tweak-rounded-corners-padding) - 10px) !important;
-  min-width: var(--uc-sidebar-hover-width) !important;
+  margin-inline-start: calc(var(--rj-tweak-rounded-corners-padding) - 10px) !important;
+  min-width: var(--rj-sidebar-hover-width) !important;
   transition-delay: 0ms !important;
   opacity: 100% !important;
   border-radius: 8px !important;
@@ -67,9 +67,9 @@
 }
 
 /* if this preference is activated in about:config, sidebar width will be increased */
-@media (-moz-bool-pref: "uc.tweak.longer-sidebar") {
+@media (-moz-bool-pref: "rj.tweak.longer-sidebar") {
   :root #sidebar-box {
-    --uc-sidebar-hover-width: 250px !important;
+    --rj-sidebar-hover-width: 250px !important;
   }
 }
 
@@ -90,11 +90,11 @@
 }
 
 #main-window[sizemode="maximized"] #sidebar-box {
-  --uc-sidebar-width: 0.3rem;
+  --rj-sidebar-width: 0.3rem;
 }
 
 #main-window[sizemode="fullscreen"] #sidebar-box {
-  --uc-sidebar-width: 0.3rem;
+  --rj-sidebar-width: 0.3rem;
 }
 
 #sidebar-header {
@@ -104,10 +104,10 @@
   font-size: 1em !important;
   font-weight: bold !important;
   margin-inline-start: calc(
-    var(--uc-tweak-rounded-corners-padding) - 10px
+    var(--rj-tweak-rounded-corners-padding) - 10px
   ) !important;
   border-bottom: 0 !important;
-  border-top-right-radius: var(--uc-tweak-rounded-corners-radius) !important;
+  border-top-right-radius: var(--rj-tweak-rounded-corners-radius) !important;
 }
 
 #sidebar-header #sidebar-switcher-target #sidebar-icon,
@@ -117,7 +117,7 @@
   visibility: collapse !important;
 }
 
-@media (-moz-bool-pref: "uc.tweak.hide-sidebar-header") {
+@media (-moz-bool-pref: "--rj.tweak.hide-sidebar-header") {
   #sidebar-header {
     visibility: collapse !important;
   }
@@ -132,22 +132,22 @@
 
 #sidebar-header,
 #sidebar {
-  transition: min-width var(--uc-autohide-transition-duration)
-    var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-  min-width: var(--uc-sidebar-width) !important;
+  transition: min-width var(--rj-autohide-transition-duration)
+    var(--rj-autohide-transition-type) var(--rj-autohide-sidebar-delay) !important;
+  min-width: var(--rj-sidebar-width) !important;
   will-change: min-width;
   background-color: var(--lwt-accent-color) !important;
 }
 
 .sidebar-panel {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(78, 3, 153, 1) !important;
   backdrop-filter: blur(10px) !important;
   color: var(--newtab-text-primary-color) !important;
 }
 
 .sidebar-panel #search-box {
   -moz-appearance: none !important;
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(78, 3, 153, 1) !important;
   color: inherit !important;
 }
 
@@ -166,15 +166,15 @@
   --ovrl-wdt: var(--ovrl-max-wdt);
 
   & :is(#sidebar-box) {
-    --uc-sidebar-width: var(--uc-sidebar-hover-width);
+    --rj-sidebar-width: var(--rj-sidebar-hover-width);
     opacity: 100%;
     background-color: transparent !important;
-    margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+    margin-inline-end: var(--rj-tweak-rounded-corners-padding) !important;
     margin-block-end: 0 !important;
     overflow: visible !important;
     &[positionend] {
-      margin-inline-start: var(--uc-tweak-rounded-corners-padding) !important;
-      margin-inline-end: var(--uc-tweak-rounded-corners-padding) !important;
+      margin-inline-start: var(--rj-tweak-rounded-corners-padding) !important;
+      margin-inline-end: var(--rj-tweak-rounded-corners-padding) !important;
     }
   }
 
@@ -196,21 +196,21 @@
 
   & #sidebar {
     margin-inline-start: calc(
-      var(--uc-tweak-rounded-corners-padding) - 3px
+      var(--rj-tweak-rounded-corners-padding) - 3px
     ) !important;
   }
 
   & #sidebar-header {
     margin-inline-start: calc(
-      var(--uc-tweak-rounded-corners-padding) - 3px
+      var(--rj-tweak-rounded-corners-padding) - 3px
     ) !important;
   }
 
   & #sidebar-box:hover > #sidebar {
     margin-inline-start: calc(
-      var(--uc-tweak-rounded-corners-padding) - 3px
+      var(--rj-tweak-rounded-corners-padding) - 3px
     ) !important;
-    min-width: var(--uc-sidebar-hover-width) !important;
+    min-width: var(--rj-sidebar-hover-width) !important;
     transition-delay: 0ms !important;
   }
 }

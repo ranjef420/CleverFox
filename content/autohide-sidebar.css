@@ -1,16 +1,16 @@
 /* autohide-sidebar.css */
-@media (-moz-bool-pref:"af.edgyarc.sidebar-always-collapsed") {
+@media (-moz-bool-pref:"rj.edgyarc.sidebar-always-collapsed") {
   :root, :root[titlepreface="᠎"] { 
     #sidebar-box {
-  --uc-sidebar-hover-width: 48px !important;
+  --rj-sidebar-hover-width: 48px !important;
   }
   }
 }
 
-@media (-moz-bool-pref:"af.edgyarc.autohide-sidebar") {
+@media (-moz-bool-pref:"rj.edgyarc.autohide-sidebar") {
       :root[titlepreface="᠎"] { 
     #sidebar-box {
-  --uc-sidebar-width: 8px !important;
+  --rj-sidebar-width: 8px !important;
   }
   
   }
@@ -19,17 +19,17 @@
 /* Apply styles only when toggled using the userchrome toggle addon */
 :root[titlepreface="᠎"] {
   #sidebar-box {
-    --uc-sidebar-width: 48px;
-    --uc-autohide-sidebar-delay: 0ms !important; 
-    --uc-autohide-transition-duration: 100ms;
-    --uc-autohide-transition-type: linear;
+    --rj-sidebar-width: 48px;
+    --rn-autohide-sidebar-delay: 0ms !important; 
+    --rj-autohide-transition-duration: 100ms;
+    --rj-autohide-transition-type: linear;
     position: relative;
-    min-width: var(--uc-sidebar-width) !important;
-    width: var(--uc-sidebar-width) !important;
-    max-width: var(--uc-sidebar-width) !important;
+    min-width: var(--rj-sidebar-width) !important;
+    width: var(--rj-sidebar-width) !important;
+    max-width: var(--rn-sidebar-width) !important;
     z-index: 1;
     @media not (-moz-bool-pref:"uc.tweak.af.sidebar-width-350") {--uc-sidebar-hover-width: 260px;}
-    @media (-moz-bool-pref:"uc.tweak.af.sidebar-width-350") {--uc-sidebar-hover-width: 350px;}
+    @media (-moz-bool-pref:"rj.tweak.af.sidebar-width-350") {--uc-sidebar-hover-width: 350px;}
   }
 
   #sidebar-box[positionend] { direction: rtl }

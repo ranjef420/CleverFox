@@ -4,33 +4,32 @@
 /* Since the UUIDs are randomly generated, only a generic path can be specified,
  * this can cause conflicts with other extensions that use the same file
  * structure, but is unlikely to cause any major issues. */
-
 @-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html") {
   /* Fix issues with rounded corners rendering. */
   :root {
     color-scheme: dark !important;
-    background: #000000 !important;
+    background: #000000 !important; /* True black */
   }
 
-  /* On macOS, ensure that text is rendered correctly. */
+  /* Ensure that text is rendered correctly On macOS */
   body * {
     -moz-osx-font-smoothing: auto !important;
   }
 
   /* ::::: Default Dark Mode Colors ::::: */
   body[style*="--s-frame-bg: #000000"]],
-  /* No theme enabled. */
+  /* If no theme enabled. */
   body:not([style*="--s-frame-bg"]) {
     --s-frame-bg: #000000 !important; /* True black background */
-    --s-frame-fg: #008CFF !important; /* Primary text */
-    --s-toolbar-bg: #000000 !important; /* Toolbar background */
-    --s-toolbar-fg: #008CFF !important; /* Toolbar text */
-    --s-act-el-bg: #4E0399 !important; /* Active element background */
-    --s-act-el-fg: #FF4D00 !important; /* Active element text */
-    --s-popup-bg: #000000 !important; /* Popup background */
-    --s-popup-fg: #008CFF !important; /* Popup text */
-    --s-popup-border: #4E0399 !important; /* Popup border */
-    --s-accent: #FF4D00 !important; /* Accent color */
+    --s-frame-fg: #008CFF !important; /* Neon blue Primary text */
+    --s-toolbar-bg: #000000 !important; /* True black Toolbar background */
+    --s-toolbar-fg: #008CFF !important; /* Neon blue Toolbar text */
+    --s-act-el-bg: #4E0399 !important; /* Saturated purple Active element background */
+    --s-act-el-fg: #FF4D00 !important; /* Bright orange Active element text */
+    --s-popup-bg: #000000 !important; /* True black Popup background */
+    --s-popup-fg: #008CFF !important; /* Neon blue Popup text */
+    --s-popup-border: #4E0399 !important; /* Saturated purple Popup border */
+    --s-accent: #FF4D00 !important; /* ABright orange accent color */
   }
 
   /* ::::: Variables ::::: */
@@ -63,10 +62,10 @@
     --nav-btn-active-shadow: inset 0 0 0 1px #4E0399, inset 0 1px 3px 0 #4E0399 !important;
 
     /* Additional variables */
-    --af-hidden-popup-bg: color-mix(in srgb, var(--frame-bg) 50%, #000000);
-    --af-fade-tab-text: linear-gradient(90deg, black 93%, #f1f1f100 99%) !important;
-    --af-total-pinned-width: calc(100vw - 6px);
-    --af-searchbar-bg-color: rgba(78, 3, 153, 0.5) !important;
+    --rj-hidden-popup-bg: color-mix(in srgb, var(--frame-bg) 50%, #000000);
+    --rj-fade-tab-text: linear-gradient(90deg, black 93%, #f1f1f100 99%) !important;
+    --rj-total-pinned-width: calc(100vw - 6px);
+    --rj-searchbar-bg-color: rgba(78, 3, 153, 0.5) !important;
        /*tabs*/
        --tabs-indent: 14px !important;
        --tabs-inner-gap: 6px !important;
@@ -74,7 +73,7 @@
        --tabs-pinned-width: 42px !important;
        --tabs-color-layer-opacity: 0.4 !important;
        --tabs-activated-color-layer-opacity: 0.6 !important;
-        @media (-moz-bool-pref:"af.edgyarc.macos-translucent") {
+        @media (-moz-bool-pref:"rj.edgyarc.macos-translucent") {
                    --tabs-color-layer-opacity: 0.5 !important;
        --tabs-activated-color-layer-opacity: 0.6 !important;
         }
@@ -94,9 +93,9 @@
        --history-item-margin: 5px !important;
        --history-item-border-radius: 4px !important;
        /*popups*/
-       --notification-bg: color-mix(in srgb, var(--frame-bg) 50%, light-dark(rgb(250, 250, 250), rgb(0, 0, 0))) !important;
+       --notification-bg: color-mix(in srgb, var(--frame-bg) 50%, rgb(0, 0, 0)) !important;
        --ctx-menu-shadow: 0 0 0 1px #4E0399, 0 0 5px 5px #4E0399 !important;
-       --ctx-menu-bg: color-mix(in srgb, var(--frame-bg) 50%, light-dark(rgb(255, 255, 255), rgb(20, 20, 20))) !important;
+       --ctx-menu-bg: color-mix(in srgb, var(--frame-bg) 50%, rgb(20, 20, 20)) !important;
        --ctx-menu-min-width: 160px !important;
        --popup-shadow: 0 0 5px 5px #4E0399 !important;
        --ctx-menu-fg: #008CFF !important;
@@ -112,7 +111,7 @@
         /* Force Dark Mode */
         &[data-frame-color-scheme="dark"] {
             color-scheme: dark !important;
-            --nav-btn-active-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.071), 0 1px 3px 0 rgb(0 0 0 / 0.212) !important;
+            --nav-btn-active-shadow: inset 0 0 0 1px rgb(255 77 0 / 0.071), 0 1px 3px 0 rgb(0 0 0 / 0.212) !important;
         }
 
         /*==== css properties ====*/
@@ -131,7 +130,7 @@
                 height: 100vh !important;
                 z-index: 999 !important;
                 transform: scaleY(-1);
-                --toolbar-bg: var(--af-hidden-popup-bg) !important;
+                --toolbar-bg: var(--rj-hidden-popup-bg) !important;
             }
 
             #hidden_panels_btn.nav-item .icon {
@@ -144,7 +143,7 @@
             }
 
             .hidden-panels-popup {
-                border: 1px solid light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.6)) !important;
+                border: 1px solid rgba(255 77 0, 0.6)) !important;
                 .nav-item {
                     margin: 3px !important;
                     .len {
@@ -153,11 +152,11 @@
                 }
             }
 
-            /*make hidden panel text not mirror the panel colour*/
-            &:has(.hidden-panels-popup) * {
-                border-radius: var(--general-border-radius) !important;
-                color: light-dark(black, white) !important;
-            }
+            /* make hidden panel text not mirror the panel colour */
+		&:has(.hidden-panels-popup) * {
+    			border-radius: var(--general-border-radius) !important;
+    			color: white !important; /* Assuming white is the desired color for dark mode */
+		}
 
             .popup-container,
             .hidden-panels-popup-layer:before {
@@ -187,24 +186,17 @@
 }
 
         /* ==== Tabs ==== */
-        /*tab scrollbox shadows*/
-        &[data-frame-color-scheme="light"] {
-                .top-shadow[data-show="true"], .bottom-shadow[data-show="true"] {
-            opacity:0.57 !important;
-        }
-            
-        }
     
         /*tab container indicator*/
         .Tab[data-audible="true"] {
             .body {
-                box-shadow: inset 0 0 0.5px 1px rgba(255,80,80,0.4) !important;
+                box-shadow: inset 0 0 0.5px 1px rgba(78, 3, 153, 0.5) !important;
                 background: rgba(255,80,80,0.1) !important;  
                 
             }
             &[data-active="true"] .body {
-                box-shadow: inset 0 0 0.5px 1px rgba(255,80,80,0.8) !important;
-                background: light-dark(rgba(255,80,80,0.5),rgba(255,100,100,0.3)) !important;   
+                box-shadow: inset 0 0 0.5px 1px rgba(78, 3, 153, 1) !important;
+                background: rgba(255, 77, 0, 0.3) !important;   
             }
             
         }
@@ -227,7 +219,7 @@
             }
 
             .title { 
-               background: linear-gradient(90deg, light-dark(black, white) 92%, #f1f1f100 99%) !important;
+               background: linear-gradient(90deg, white 92%, #f1f1f100 99%) !important;
 	           background-clip: text !important;
 	           color: transparent !important;  
             }
@@ -287,7 +279,7 @@
 
             .child-count {
                 opacity: 1 !important;
-                text-shadow: 0 2px 5px light-dark(white, rgba(0, 0, 0, 0.6)), 2px 0px 5px light-dark(white, rgba(0, 0, 0, 0.6)), 0 0px 4px light-dark(white, rgba(0, 0, 0, 0.6)) !important;
+                text-shadow: 0 2px 5px text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6), 2px 0px 5px rgba(0, 0, 0, 0.6), 0 0px 4px rgba(0, 0, 0, 0.6) !important;
                 
             }
 
@@ -300,7 +292,7 @@
         #search_bar {
             order: 2;
             padding-right: 12px;
-            --toolbar-bg: var(--af-searchbar-bg-color) !important;
+            --toolbar-bg: var(--rj-searchbar-bg-color) !important;
 
             .clear-btn {
                 margin-right: 7px !important;
@@ -311,10 +303,10 @@
   .TabsPanel .new-tab-btns {
     /* Add space for the separator. */
     padding-top: calc(var(--tabs-margin) + 1px) !important;
-      @media (-moz-bool-pref:"af.sidebery.nav-on-top") {
+      @media (-moz-bool-pref:"rj.sidebery.nav-on-top") {
           margin-bottom:10px !important;
       }
-      @media (-moz-bool-pref:"af.sidebery.top-new-tab-btn") {
+      @media (-moz-bool-pref:"rj.sidebery.top-new-tab-btn") {
           margin-bottom:0px !important;
             
           .new-tab-btn {
@@ -327,7 +319,7 @@
       width: calc(100% - var(--tabs-margin)*2) !important;
       inset-inline: auto !important;
       top: 0 !important;
-      @media not (-moz-bool-pref:"af.sidebery.top-new-tab-btn") { 
+      @media not (-moz-bool-pref:"rj.sidebery.top-new-tab-btn") { 
           border-top: 1px solid var(--separator-color) !important; }
            
       box-shadow: none !important;
@@ -371,7 +363,7 @@
         color: var(--frame-fg) !important;
       }
     }
-            @media (-moz-bool-pref:"af.sidebery.top-new-tab-btn") {
+            @media (-moz-bool-pref:"rj.sidebery.top-new-tab-btn") {
           order:  -5 !important;
       }
   }
@@ -394,7 +386,7 @@
                 margin:0px !important;
                 transition: height 100ms ease-in-out 0ms, width 100ms ease-in-out 0ms;
                 
-                @media not (-moz-bool-pref:"af.sidebery.always-panel-show-tab-count")
+                @media not (-moz-bool-pref:"rj.sidebery.always-panel-show-tab-count")
                 {.nav-item:not(:hover):not([data-active="true"]) .len {
                     opacity:0 !important;
                     transition:opacity 200ms linear !important;
@@ -444,7 +436,7 @@
         /*------------on narrow sidebar*/
         @media (min-width: 150px) and (max-width: 239px) {
             --pinned-tabs-col: 3;
-            @media not (-moz-bool-pref:"af.sidebery.static-pinned-tab-width") {
+            @media not (-moz-bool-pref:"rj.sidebery.static-pinned-tab-width") {
             .PinnedTabsBar .tab-wrapper {
 
                 /* when one tab in bottom row */
@@ -465,7 +457,7 @@
         /*--------------on regular sidebar*/
         @media (min-width: 240px) and (max-width: 280px) {
             --pinned-tabs-col: 4;
- @media not (-moz-bool-pref:"af.sidebery.static-pinned-tab-width") {
+ @media not (-moz-bool-pref:"rj.sidebery.static-pinned-tab-width") {
             .PinnedTabsBar .tab-wrapper {
 
                 /* when one tab in bottom row */
@@ -509,7 +501,7 @@
         /*----------- Collapsed sidebar stuff from here ----------------------------*/
 
         @media (max-width:150px) {
-            @media (-moz-bool-pref:"af.sidebery.minimal-collapsed") {
+            @media (-moz-bool-pref:"rj.sidebery.minimal-collapsed") {
                 .PinnedTabsBar, .top-horizontal-box {
                     visibility:collapse !important;
                 }
@@ -601,7 +593,7 @@
                 height: 32px !important;
                 margin-bottom: 3px !important;
                 margin-left: 2px !important;
-                border: 1px solid light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.2)) !important;
+                border: 1px solid rgba(0, 0, 0, 0.6), 2px 0px 5px rgba(0, 0, 0, 0.6), 0 0px 4px rgba(0, 0, 0, 0.6) !important;
                 opacity: 1 !important;
                 filter: contrast(140%) !important;
             }
@@ -613,7 +605,7 @@
 
         @media (max-width: 160px) {
             
-            @media (-moz-bool-pref:"af.sidebery.minimal-collapsed") {
+            @media (-moz-bool-pref:"rj.sidebery.minimal-collapsed") {
                 .PinnedTabsBar, .PinnedTabsBar .Tab, .top-horizontal-box * {
                     display:none !important;
                     
@@ -689,7 +681,7 @@
                 height: 32px !important;
                 margin-bottom: 3px !important;
                 margin-left: 2px !important;
-                border: 1px solid light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.2)) !important;
+                border: 1px solid rgba(0, 0, 0, 0.6), 2px 0px 5px rgba(0, 0, 0, 0.6), 0 0px 4px rgba(0, 0, 0, 0.6) !important;
                 opacity: 1 !important;
                 filter: contrast(140%) !important;
             }

@@ -1,5 +1,7 @@
-/* ArcWTF - navbar.css (Fully Integrated with Shimmer) */
-/* Retaining full ArcWTF structure while inserting Shimmer’s transparency and UI refinements */
+/* ==================================== 
+            # navbar.css #
+      Transparency & inactive effects
+======================================== /*
 
 :root {
   --toolbarbutton-border-radius: 4px !important;

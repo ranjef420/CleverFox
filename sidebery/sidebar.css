@@ -2,7 +2,7 @@
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar {
-  margin-bottom: var(--rj-tweak-rounded-corners-padding) !important;
+  margin-bottom: var(--rj-tweak-rounded-corners-padding)
   background-color: rgba(78, 3, 153, 1) !important;
   backdrop-filter: blur(12px) !important;
   border-radius: 8px !important;
@@ -11,7 +11,7 @@
 #sidebar-title {
   padding-inline: 0 !important;
   padding-top: 2px !important;
-  opacity: 40% !important;
+  opacity: 0.4 !important;
 }
 
 #sidebar-switcher-target {
@@ -29,7 +29,6 @@
   min-width: var(--rj-sidebar-width) !important;
   width: var(--rj-sidebar-width) !important;
   max-width: var(--rj-sidebar-width) !important;
-
   background-color: transparent !important;
   backdrop-filter: blur(12px) !important;
   border-radius: 12px !important; /* Match popover URL bar */
@@ -37,13 +36,13 @@
 
   z-index: 4;
   transition: width 0.3s ease, opacity 0.3s ease !important;
-  opacity: 0.01 !important; /* Fix opacity value */
+  opacity: 0.5 /* Adjusted for better visibility */
 }
 
-/* Ensure Hover State Applies Background Color */
+/* Ensures Hover State Applies Background Color */
 #sidebar-box:hover {
   opacity: 100% !important;
-  background-color: var(--lwt-accent-color-light) !important; /* Add background color */
+  background-color: var(--lwt-accent-color-light), rgba(78, 3, 153, 1); /* Add background color */
   transition: opacity 0.2s ease-in-out !important;
 }
 

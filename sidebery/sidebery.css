@@ -17,7 +17,7 @@
   }
 
   /* ::::: Default Dark Mode Colors ::::: */
-  body[style*="--s-frame-bg: #000000"],
+  body[style*="--s-frame-bg: #000000",
   /* If no theme enabled. */
   body:not([style*="--s-frame-bg"]) {
     --s-frame-bg: #000000 !important; /* True black background */

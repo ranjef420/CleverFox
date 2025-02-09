@@ -1,0 +1,62 @@
+/* ==============================
+            URL Bar CSS
+   Popover styling, compact design, and smooth transitions
+   ============================== */
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+
+    /* === GLOBAL URLBAR STYLES === */
+    #urlbar {
+        border-radius: 10px !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    /* === URLBAR POPOVER EFFECT (SHIMMER) === */
+    #urlbar[open] {
+        position: absolute !important;
+        top: 50px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 500px !important;
+        max-width: 90vw !important;
+        background: rgba(30, 30, 30, 0.95) !important;
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3) !important;
+        border-radius: 12px !important;
+        padding: 8px !important;
+    }
+
+    /* === URLBAR TRANSITIONS === */
+    #urlbar:not([open]) {
+        width: 250px !important;
+    }
+
+    #urlbar:hover {
+        background: rgba(50, 50, 50, 0.5) !important;
+    }
+
+    /* === ICON & BUTTON STYLING === */
+    .urlbar-icon, .urlbar-button {
+        padding: 6px !important;
+        transition: background-color 0.2s ease-in-out !important;
+        border-radius: 8px !important;
+    }
+
+    .urlbar-icon:hover, .urlbar-button:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* === ALIGNMENT FIXES (EDGYARC) === */
+    #nav-bar {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    /* === COMPACT URL BAR OPTION === */
+    @media (-moz-bool-pref:"af.edgyarc.compact-urlbar") {
+        #urlbar {
+            height: 32px !important;
+            padding: 4px 8px !important;
+        }
+    }
+}

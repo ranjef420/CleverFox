@@ -4,7 +4,7 @@
   --panel-subview-body-padding: 2px 0 !important;
   --arrowpanel-border-radius: 8px !important;
   --arrowpanel-menuitem-border-radius: 4px !important;
-  --arrowpanel-menuitem-margin: var(--uc-arrowpanel-menuitem-margin-block) var(--uc-arrowpanel-menuitem-margin-inline) !important;
+  --arrowpanel-menuitem-margin: var(--rj-arrowpanel-menuitem-margin-block) var(--rj-arrowpanel-menuitem-margin-inline) !important;
   --arrowpanel-menuitem-padding-block: 6px !important;
   --arrowpanel-menuitem-padding-inline: 10px !important;
   --uc-arrowpanel-menuicon-margin-inline: 14px;
@@ -15,7 +15,7 @@
 
   --uc-panel-zoom-button-padding: 8px;
   --uc-panel-zoom-button-inline-padding: 9px;
-  --uc-panel-zoom-padding-block: calc(var(--panel-separator-margin-vertical) + var(--uc-arrowpanel-menuitem-margin-block));
+  --uc-panel-zoom-padding-block: calc(var(--panel-separator-margin-vertical) + var(--rj-arrowpanel-menuitem-margin-block));
 
   --uc-autocomplete-panel-menuitem-margin: 4px;
   --uc-autocomplete-panel-menuicon-padding-inline: 14px;

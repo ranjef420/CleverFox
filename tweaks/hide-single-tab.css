@@ -4,9 +4,8 @@
 	display: none !important;
 }
 
-/* TODO: Hide tabbar bottom border */
+/* ------- Ensure compatibility with Neptune's structure, aesthetic, and UI ------- */
 
-/* Ensure compatibility with Neptune's structure, aesthetic, and UI */
 #tabbrowser-tabs {
 	--tab-min-height: 28px !important;
 	--tab-background-color: var(--neptune-tab-background) !important;
@@ -537,3 +536,8 @@
 	--tab-icon-overlay-transition-property: background-color, opacity !important;
 	--tab-icon-overlay-hover-background-color: var(--neptune-button-field-hover-color) !important;
 	--tab-icon-overlay-active-background-color: var(--neptune-button-field-active-color)
+
+
+
+/* ----- TO-DO: Hide tabbar bottom border ----- */
+

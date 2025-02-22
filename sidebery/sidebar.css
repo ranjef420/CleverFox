@@ -1,5 +1,5 @@
-/* Show sidebar only when the cursor is over it  */
-/* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
+/* --- Show sidebar only when cursor hovers over it --- */
+/* Border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
 #sidebar {
   margin-bottom: var(--uc-tweak-rounded-corners-padding) !important;
@@ -33,8 +33,7 @@
   opacity: 1%;
 }
 
-/* Add a pseudoelement to increase the hover area for the sidebar */
-
+/* --- Add a pseudoelement to increase the hover area for the sidebar --- */
 #sidebar-box::before {
   content: "";
   position: absolute;
@@ -43,7 +42,7 @@
   z-index: -1;
 }
 
-/* if this preference is activated in about:config, sidebar width will be increased */
+/* --- If this activated, sidebar width increases ---*/
 @media (-moz-bool-pref: "uc.tweak.longer-sidebar") {
   :root #sidebar-box {
     --uc-sidebar-hover-width: 250px !important;
@@ -139,8 +138,7 @@
   color: inherit !important;
 }
 
-/* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
-
+/* --- Moves statuspanel to the other side when sidebar hovers so it doesn't get covered by sidebar --- */
 #sidebar-box:not([positionend]):hover ~ #tabbrowser-tabbox #statuspanel {
   inset-inline: auto 0px !important;
 }
@@ -201,8 +199,9 @@
     transition-delay: 0ms !important;
   }
 }
+/* =======
+/* --- Ensure compatibility with Neptune's structure, aesthetic, and UI --- */
 
-/* Ensure compatibility with Neptune's structure, aesthetic, and UI */
 #sidebar-box {
   --rj-sidebar-width: 8px !important;
   --rj-sidebar-hover-width: 48px !important;

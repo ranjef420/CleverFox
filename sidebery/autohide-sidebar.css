@@ -1,6 +1,7 @@
   /* ------------------------ */
   /*   Autohide the Sidebar   */
   /* ------------------------ */
+
 @media (-moz-bool-pref:"rj.edgyarc.sidebar-always-collapsed") {
   :root, :root[titlepreface="᠎"] { 
     #sidebar-box {

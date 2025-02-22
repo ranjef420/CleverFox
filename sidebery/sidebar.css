@@ -199,8 +199,9 @@
     transition-delay: 0ms !important;
   }
 }
-
+/* =======
 /* --- Ensure compatibility with Neptune's structure, aesthetic, and UI --- */
+
 #sidebar-box {
   --rj-sidebar-width: 8px !important;
   --rj-sidebar-hover-width: 48px !important;

@@ -201,3 +201,126 @@
     transition-delay: 0ms !important;
   }
 }
+
+/* Ensure compatibility with Neptune's structure, aesthetic, and UI */
+#sidebar-box {
+  --rj-sidebar-width: 8px !important;
+  --rj-sidebar-hover-width: 48px !important;
+  --rn-autohide-sidebar-delay: 0ms !important;
+  --rj-autohide-transition-duration: 100ms;
+  --rj-autohide-transition-type: linear;
+  position: relative;
+  min-width: var(--rj-sidebar-width) !important;
+  width: var(--rj-sidebar-width) !important;
+  max-width: var(--rn-sidebar-width) !important;
+  z-index: 1;
+}
+
+#sidebar-box[positionend] {
+  direction: rtl;
+}
+#sidebar-box[positionend] > * {
+  direction: ltr;
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+  direction: ltr;
+}
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > * {
+  direction: rtl;
+}
+
+#sidebar-splitter {
+  width: 10px !important;
+  visibility: collapse;
+}
+
+#sidebar-header::before,
+#sidebar-header::after {
+  content: "";
+  display: flex;
+  padding-left: 8px;
+}
+
+#sidebar-box:hover > #sidebar-header,
+#sidebar-box:hover > #sidebar {
+  min-width: var(--uc-sidebar-hover-width) !important;
+  max-width: var(--uc-sidebar-hover-width) !important;
+  transition: min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay), box-shadow var(--uc-autohide-transition-duration) ease-in-out var(--uc-autohide-sidebar-delay) !important;
+}
+
+.sidebar-panel {
+  background-color: transparent !important;
+  color: var(--newtab-text-primary-color) !important;
+}
+
+.sidebar-panel #search-box {
+  -moz-appearance: none !important;
+  background-color: rgba(249, 249, 250, 0.1) !important;
+  color: inherit !important;
+}
+
+#sidebar,
+#sidebar-header {
+  background-color: inherit !important;
+  border-inline: 0px;
+  border-inline-width: 0px 0px;
+}
+
+#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
+#sidebar-box[positionend] > * {
+  border-inline-width: 0px 0px;
+}
+
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel {
+  inset-inline: auto 0px !important;
+}
+
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label {
+  margin-inline: 0px !important;
+  border-left-style: solid !important;
+}
+
+#sidebar-box {
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out !important;
+}
+
+#sidebar-box:hover {
+  width: var(--uc-sidebar-hover-width) !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+#sidebar-box.expanded {
+  width: var(--uc-sidebar-hover-width) !important;
+  opacity: 1 !important;
+}
+
+#sidebar-box.collapsed {
+  width: var(--uc-sidebar-width) !important;
+  opacity: 0.8 !important;
+}
+
+#sidebar-box {
+  transition: width 0.3s ease, opacity 0.3s ease !important;
+}
+
+#sidebar-box.inactive {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+#sidebar-box:not(.collapsed):hover {
+  width: var(--uc-sidebar-hover-width) !important;
+  opacity: 1 !important;
+}
+
+#sidebar-box.collapsed .sidebery-icon {
+  transform: scale(0.8) !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+#sidebar-box.expanded .sidebery-icon {
+  transform: scale(1) !important;
+  transition: transform 0.3s ease-in-out !important;
+}

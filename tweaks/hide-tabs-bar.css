@@ -198,3 +198,102 @@
     }
   }
 }
+
+/* Ensure compatibility with Neptune's structure, aesthetic, and UI */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+#nav-bar {
+  padding-top: var(--uc-tab-top-margin, 0) !important;
+}
+
+#toolbar-menubar {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+.titlebar-buttonbox-container {
+  display: flex !important;
+  margin-top: calc(-1 * var(--uc-tab-top-margin, 0)) !important;
+}
+
+.titlebar-spacer {
+  width: max(calc(var(--uc-titlebar-drag-space, 0px) - var(--toolbar-start-end-padding, 0px)), 0px) !important;
+}
+
+.titlebar-spacer[type*="pre"] {
+  display: flex !important;
+}
+
+.titlebar-buttonbox {
+  visibility: visible !important;
+  position: fixed !important;
+  top: 0;
+  height: calc(var(--uc-navbar-height) + var(--uc-tab-top-margin, 0)) !important;
+  z-index: 100 !important;
+  inset-inline: auto 0;
+}
+
+#PanelUI-menu-button {
+  padding-inline-end: 0 !important;
+}
+
+#nav-bar-customization-target > :is(toolbarbutton, toolbaritem):first-child {
+  padding-inline-start: 0 !important;
+}
+
+#sidebar-box {
+  --sidebar-background-color: var(--toolbar-bgcolor) !important;
+  --sidebar-text-color: var(--toolbar-color) !important;
+  --sidebar-border-color: var(--chrome-content-separator-color) !important;
+  position: relative !important;
+}
+
+#sidebar-header {
+  border-bottom: 0 !important;
+  padding: 10px 4px 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+#sidebar-switcher-target,
+#sidebar-close {
+  width: auto !important;
+  height: 28px !important;
+  padding: 0 8px !important;
+  border: none !important;
+  margin-inline: 0 !important;
+}
+
+#sidebar-spacer {
+  min-width: 8px !important;
+}
+
+#sidebar-box:not([positionend]) {
+  border-inline-end: 1px solid var(--sidebar-border-color);
+  padding-inline: 4px 3px;
+}
+
+#sidebar-box[positionend] {
+  border-inline-start: 1px solid var(--sidebar-border-color);
+  padding-inline: 3px 4px;
+}
+
+#sidebar-box:not([positionend]),
+#sidebar-box[positionend] {
+  border-inline: none;
+  padding-inline: 0;
+}
+
+#sidebar-box:not([positionend]) {
+  padding-inline-end: 3px;
+}
+
+#sidebar-box[positionend] {
+  padding-inline-start: 3px;
+}
+
+#sidebar-header {
+  padding-top: 4px !important;
+}

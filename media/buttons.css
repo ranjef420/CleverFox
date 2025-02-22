@@ -1,7 +1,9 @@
-/* Buttons */
+/* ===============
+   All the Buttons 
+   ===============*/
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Hide buttons separator */
+/* -- Hides button separator --- */
 #nav-bar .toolbaritem-combined-buttons separator {
 	display: none !important;
 }
@@ -10,7 +12,7 @@
 	border: 0 !important;
 }
 
-/* Buttons  */
+/* --- Buttons  --- */
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsHistory,
@@ -48,7 +50,7 @@
 	transition: all 200ms;
 }
 
-/* Text buttons */
+/* --- Text buttons --- */
 .subviewbutton.panel-subview-footer,
 .panel-footer button,
 #downloadsHistory,
@@ -69,7 +71,7 @@
 	text-align: center !important;
 }
 
-/* Drop down buttons */
+/* --- Drop down buttons --- */
 #sidebar-switcher-target,
 #viewButton {
 	padding: 2px 16px !important;
@@ -88,11 +90,11 @@
 	right: 8px !important;
 	top: 8px !important;
 }
-.menulist-label-box:after { /* Create arrow if icon tag no exist */
+.menulist-label-box:after { /* Creates arrow if icon tag doesnt exist */
 	content: "";
 }
 
-/* Hover buttons */
+/* --- Hover buttons --- */
 .subviewbutton.panel-subview-footer:hover,
 .panel-footer button:hover,
 #downloadsHistory:hover,
@@ -120,7 +122,7 @@ menulist:hover .menulist-label-box,
 	background: var(--gnome-button-hover-background) !important;
 }
 
-/* Active buttons */
+/* --- Active buttons --- */
 .subviewbutton.panel-subview-footer:active,
 .panel-footer button:active,
 #downloadsHistory:active,
@@ -148,7 +150,7 @@ menulist[open] .menulist-label-box,
 	border-color: var(--gnome-button-active-border-color) !important;
 }
 
-/* Fix HTML select colour */
+/* --- Fix HTML select colour --- */
 menulist>menupopup>menuitem,
 menulist>menupopup>menucaption,
 menulist>menupopup>menu {
@@ -161,7 +163,7 @@ menulist>menupopup>menucaption,
 menulist>menupopup>menu {
 	background: var(--gnome-button-hover-background) !important;
 }
-/* Disabled buttons */
+/* --- Disabled buttons --- */
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton[disabled],
 #context-navigation menuitem[disabled],
 #webRTC-shareDevices-notification>.popup-notification-button-container>.popup-notification-primary-button[disabled] {
@@ -181,7 +183,7 @@ menulist>menupopup>menu {
 	background: var(--gnome-button-disabled-background) !important;
 }
 
-/* Inactive window buttons */
+/* --- Inactive window buttons --- */
 .findbar-container toolbarbutton:-moz-window-inactive,
 #sidebar-switcher-target:-moz-window-inactive,
 #viewButton:-moz-window-inactive {
@@ -190,7 +192,7 @@ menulist>menupopup>menu {
 	border-color: var(--gnome-inactive-button-border-color) !important;
 }
 
-/* Flat buttons */
+/* --- Flat buttons --- */
 .subviewbutton-back:not(#hack),
 #TabsToolbar .toolbarbutton-1 {
 	background: transparent !important;
@@ -250,7 +252,7 @@ menulist>menupopup>menu {
 	background: var(--gnome-button-active-color) !important;
 }
 
-/* Circle buttons */
+/* --- Circle buttons --- */
 #downloadsPanel-mainView .download-state .downloadButton,
 .identity-popup-permission-remove-button:not(#hack) {
 	padding: 0 0 !important;
@@ -261,7 +263,7 @@ menulist>menupopup>menu {
 	border-radius: 100% !important;
 }
 
-/* Combined buttons */
+/* --- Combined buttons --- */
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:last-of-type),
 .panel-footer button:not(:only-of-type):not(:last-of-type),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#appMenu-zoomEnlarge-button),
@@ -292,7 +294,7 @@ menulist>menupopup>menu {
 	margin-right: 0 !important;
 }
 
-/* Buttons with suggested action */
+/* --- Action Buttons --- */
 #appMenu-popup .panel-banner-item[notificationid="update-restart"],
 button.popup-notification-primary-button,
 #editBookmarkPanelDoneButton,
@@ -320,7 +322,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	text-shadow: none !important;
 }
 
-/* Buttons with destructive action */
+/* --- Destructive Buttons --- */
 #editBookmarkPanelRemoveButton,
 #PanelUI-panic-view-button {
 	color: white !important;
@@ -354,7 +356,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	filter: invert(100%) brightness(200%);
 }
 
-/* User sync menu, bigger avatar */
+/* --- User sync menu, bigger avatar --- */
 #fxa-toolbar-menu-button .toolbarbutton-badge-stack {
 	margin: 0 !important;
 }
@@ -366,9 +368,9 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	width: 16px !important;
 }
 
-/* Buttons Issues/Glitches fixes */
+/* --- Buttons Issue & Glitche fixers --- */
 
-/* Overrides: Make the back button the same as other buttons */
+/* --- Overrides: Makes the back button the same as other buttons --- */
 :root:not([uidensity=compact]) #back-button {
 	border-radius: var(--toolbarbutton-border-radius) !important;
 }
@@ -395,19 +397,19 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	border-color: unset;
 }
 
-/* Remove the header bar buttons' hover styles */
+/* --- Removes the header bar buttons' hover styles --- */
 #nav-bar {
 	--toolbarbutton-active-background: transparent !important;
 	--toolbarbutton-hover-background: transparent !important;
 }
 
-/* Glitch customizing: Cut / Copy / Paste buttons' icons
- * :not(#hack) is there just to elevate rule priority */
+/* --- Glitch customizing: Cut / Copy / Paste buttons' icons
+ * :not(#hack) is there just to elevate rule priority --- */
 :root[customizing] #nav-bar>hbox toolbaritem toolbarbutton image:not(#hack) {
 	opacity: 1 !important;
 }
 
-/* Glitch customizing: Reload and Cut / Copy / Paste buttons */
+/* --- Glitch customizing: Reload and Cut / Copy / Paste buttons --- */
 :root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button toolbarbutton,
 :root:-moz-window-inactive[customizing] #nav-bar #edit-controls toolbarbutton {
 	background-image: var(--gnome-inactive-button-background);
@@ -415,25 +417,25 @@ button.popup-notification-primary-button.popup-notification-button:active,
 
 }
 
-/* Glitch customizing: Reload and Cut / Copy / Paste buttons' icons */
+/* --- Glitch customizing: Reload and Cut / Copy / Paste buttons' icons --- */
 :root:-moz-window-inactive[customizing] #nav-bar #stop-reload-button image.toolbarbutton-icon,
 :root:-moz-window-inactive[customizing] #nav-bar #edit-controls image.toolbarbutton-icon {
 	opacity: .7 !important;
 }
 
-/* Glitch: Overflow and Burger buttons
- * :not(#hack) is there just to elevate rule priority */
+/* --- Glitch: Overflow and Burger buttons
+ * :not(#hack) is there just to elevate rule priority --- */
 :root[customizing] #nav-bar>toolbarbutton[disabled]:not(#hack),
 :root[customizing] #nav-bar>toolbaritem>toolbarbutton[disabled]:not(#hack) {
 	opacity: .5 !important;
 }
 
-/* Glitch: Overflow button's icon */
+/* ---- Glitch: Overflow button's icon --- */
 :root[customizing] #nav-bar toolbarbutton:not(#urlbar-zoom-button)[disabled] image {
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
 }
 
-/* Bookmark buttons */
+/* --- Bookmark buttons --- */
 #nav-bar toolbarbutton.bookmark-item {
 	width: auto !important;
 }
@@ -446,7 +448,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	padding-right: 6px;
 }
 
-/* Remove Burger button's left separator */
+/* --- Remove Burger button's left separator --- */
 #PanelUI-button {
 	border: 0 !important;
 	margin: 0 !important;
@@ -458,7 +460,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	margin-left: 10px !important;
 }*/
 
-/* Fix library animation */
+/* --- Fixes library animation --- */
 #library-animatable-box {
 	--library-button-height: 46px !important;
 	--library-icon-x: 1716px !important;
@@ -469,7 +471,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	fill: transparent !important;
 }
 
-/* Fix toolbars close icons */
+/* --- Fixes toolbars close icons --- */
 .close-icon:not(.tab-close-button) image {
 	height: 16px !important;
 	width: 16px !important;
@@ -481,7 +483,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	display: none !important;
 }
 
-/* Identity site popover buttons */
+/* --- Identity site popover buttons --- */
 .identity-popup-preferences-button:not(#hack) {
 	list-style-image: url("chrome://browser/skin/settings.svg") !important;
 }
@@ -494,7 +496,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	margin-inline-start: 3px !important;
 }
 
-/* Fix findbar buttons issues */
+/* --- Fix findbar buttons issues --- */
 .findbar-container .findbar-find-previous image,
 .findbar-container .findbar-find-next image {
 	margin: 6px !important;
@@ -505,7 +507,7 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	outline: 0 !important;
 }
 
-/* Sidebar header button reset font size */
+/* --- Sidebar header button reset font size --- */
 #sidebar-header,
 #sidebar-search-container,
 #bookmarksPanel,
@@ -517,18 +519,18 @@ button.popup-notification-primary-button.popup-notification-button:active,
 	color: var(--gnome-sidebar-color) !important;
 }
 
-/* Sidebar header button arrow opacity */
+/* --- Sidebar header button arrow opacity --- */
 #sidebar-switcher-arrow {
 	opacity: 1 !important;
 }
 
-/* Sidebar history view */
+/* --- Sidebar history view --- */
 #viewButton {
 	margin: 0 !important;
 	margin-inline-start: 6px !important;
 }
 
-/* Menulist */
+/* --- Menu list --- */
 menulist {
 	-moz-appearance: none !important;
 }
@@ -537,23 +539,23 @@ menulist {
 	margin-right: 0 !important;
 }
 
-/* Bookmarks editor buttons */
+/* --- Bookmark editor buttons --- */
 .expander-down image,
 .expander-up image {
 	margin: 6px !important;
 }
 
-/* Identity popup tracking protection button */
+/* --- Identity popup tracking protection button --- */
 .tracking-protection-button {
 	margin-inline-end: 0 !important;
 }
 
-/* Identity popup delete permission button */
+/* --- Identity popup delete permission button --- */
 .identity-popup-permission-remove-button {
 	opacity: 1 !important;
 }
 
-/* Identity popup expander button */
+/* --- Identity popup expander button --- */
 #identity-popup-security {
 	align-content: center;
 }
@@ -578,7 +580,8 @@ menulist {
 #tracking-protection-icon-container:hover:active, #tracking-protection-icon-container[open="true"]{
 	background-color: var (--gnome-button-active-background) !important;
 }
-/* add safari warning color to security popup*/
+
+/* --- Add warning color to security popup --- */
 #identity-popup[connection^="secure"] .identity-popup-security-connection .toolbarbutton-icon{
 	fill: var(--safari-safe-color) !important;
 }

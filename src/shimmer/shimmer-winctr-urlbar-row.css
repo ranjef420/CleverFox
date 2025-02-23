@@ -1,0 +1,93 @@
+/*? move the window control buttons to the same row as urlbar */
+#main-window[titlepreface="​"] #navigator-toolbox {
+	display: grid !important;
+	grid-template-rows: repeat(4, auto);
+}
+#PersonalToolbar:not([collapsed="true"]) {
+	padding-bottom: calc(var(--shimmer-top-bottom-browser-margin) / 2) !important;
+}
+@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+	#PersonalToolbar {
+		grid-area: 4 / 1 / 5 / 3 !important;
+	}
+}
+@media not (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+	#main-window[titlepreface="​"] #PersonalToolbar {
+		grid-area: 4 / 1 / 5 / 3 !important;
+	}
+}
+@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+	#toolbar-menubar {
+		grid-area: 1 / 1 / 2 / 3 !important;
+	}
+}
+@media not (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+	#main-window[titlepreface="​"] #toolbar-menubar {
+		grid-area: 1 / 1 / 2 / 3 !important;
+	}
+}
+@media not (-moz-bool-pref: "shimmer.reverse-winctr-buttons-side") {
+	#navigator-toolbox {
+		grid-template-columns: 1fr auto !important;
+	}
+
+	@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+		#nav-bar {
+			grid-area: 3 / 1 / 4 / 2 !important;
+		}
+	}
+	#main-window[titlepreface="​"] #nav-bar {
+		grid-area: 3 / 1 / 4 / 2 !important;
+	}
+
+	@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+		#TabsToolbar {
+			grid-area: 3 / 2 / 4 / 3 !important;
+		}
+	}
+	#main-window[titlepreface="​"] #TabsToolbar {
+		grid-area: 3 / 2 / 4 / 3 !important;
+	}
+}
+@media (-moz-bool-pref: "shimmer.reverse-winctr-buttons-side") {
+	#navigator-toolbox {
+		grid-template-columns: auto 1fr !important;
+	}
+
+	@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+		#nav-bar {
+			grid-area: 3 / 2 / 4 / 3 !important;
+		}
+	}
+	#main-window[titlepreface="​"] #nav-bar {
+		grid-area: 3 / 2 / 4 / 3 !important;
+	}
+
+	@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+		#TabsToolbar {
+			grid-area: 3 / 1 / 4 / 2 !important;
+		}
+	}
+	#main-window[titlepreface="​"] #TabsToolbar {
+		grid-area: 3 / 1 / 4 / 2 !important;
+	}
+
+	@supports (not (-moz-osx-font-smoothing: grayscale)) {
+		#TabsToolbar {
+			flex-direction: row-reverse !important;
+		}
+	}
+}
+
+@supports (-moz-osx-font-smoothing: grayscale) {
+	.titlebar-buttonbox-container {
+		justify-content: space-evenly !important;
+		align-items: center !important;
+	}
+	.titlebar-buttonbox {
+		align-items: center !important;
+	}
+	.titlebar-button {
+		height: 100% !important;
+	}
+}

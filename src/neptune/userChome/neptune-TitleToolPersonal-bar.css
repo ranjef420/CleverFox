@@ -1,0 +1,31 @@
+/*---------- Titlebar ----------*/
+.browser-titlebar {
+		align-self: center;
+		will-change: unset !important;
+	}
+
+/*---------- Toolbar ----------*/
+#TabsToolbar {
+		grid-area: 1 / 2 / span 1 / span 1;
+		padding: var(--theme-browser-toolbox-padding) calc(3 * var(--tab-min-height) + 4 * var(--toolbar-start-end-padding) + var(--toolbarbutton-outer-padding) - var(--toolbar-start-end-padding) / 2) var(--theme-browser-toolbox-padding) 0 !important;
+
+		:root[customizing] & {
+			padding-inline-end: calc(2 * var(--tab-min-height) + 3 * var(--toolbar-start-end-padding)) !important;
+		}
+	}
+
+
+/*---------- Personalbar ----------*/
+#PersonalToolbar {
+		background-color: var(--neptune-toolbar-background) !important;
+
+		&[customizing] {
+			outline: none !important;
+		}
+
+		toolbarbutton.bookmark-item:not(.subviewbutton) {
+			padding-inline: var(--space-xsmall) !important;
+			border-radius: var(--border-radius-small) !important;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+/*---------- Findbar ----------*/
+
+findbar {
+	position: absolute;
+	contain: content;
+	inset-inline-end: 0;
+	background-color: var(--neptune-toolbar-background) !important;
+	border: none !important;
+	border-bottom-left-radius: 6px;
+	padding: 0 !important;
+	transition-property: margin-right, visibility !important;
+
+	&:where([hidden]) {
+		margin-right: -266px !important;
+	}
+
+	> .findbar-container {
+		margin: 0 !important;
+
+		.findbar-textbox {
+			width: 12em !important;
+			padding: 0 var(--space-xsmall) !important;
+			background-color: transparent !important;
+			border-color: var(--border-color-deemphasized) !important;
+		}
+
+		:is(.findbar-find-next, .findbar-find-previous) {
+			padding: 0 2px !important;
+			border: 1px solid var(--border-color-deemphasized);
+		}
+
+		.findbar-find-next {
+			list-style-image: url("neptune/icons/arrow-right.svg") !important;
+			margin-left: -1px !important;
+			border-radius: 0 4px 4px 0 !important;
+			border-left: none;
+		}
+
+		.findbar-find-previous {
+			list-style-image: url("neptune/icons/arrow-left.svg") !important;
+			border-radius: 4px 0 0 4px !important;
+		}
+
+		> :is(.findbar-find-status, .found-matches) {
+			order: -1;
+			margin-inline: var(--space-xsmall) !important;
+		}
+	}
+
+	> .findbar-closebutton {
+		width: 42px !important;
+		padding: 0 !important;
+		margin-block: auto !important;
+		list-style-image: url("neptune/icons/done.svg") !important;
+		border: 1px solid var(--border-color-deemphasized);
+
+		@media (-moz-platform: macos) {
+			order: 1;
+		}
+	}
+}

@@ -1,0 +1,95 @@
+/*---------- root ----------*/
+:root {
+	--theme-browser-toolbox-padding: 12px;	/*This value will affect the height of the toolbar.*/
+	--toolbar-start-end-padding: 10px !important;
+	--space-xsmall: 0.25rem !important;
+	--urlbar-min-height: 28px !important;
+	--urlbarView-small-font-size: 0.84em !important;
+	--urlbarView-labeled-row-label-top: calc(-1.2em - 6px) !important;
+	--tab-min-height: 28px !important;
+	--tabstrip-min-height: var(--tab-min-height) !important;
+	--tab-group-label-height: var(--tab-min-height) !important;
+	--tab-label-line-height: 1.6 !important;
+	--tab-shadow-max-size: 0 !important;
+	--button-min-height: 22px !important;
+	--button-padding: 0 var(--space-large) !important;
+	--border-radius-small: 6px !important;
+	--border-radius-large: 12px;
+	--menu-panel-width-wide: 24em !important;
+	--uei-icon-size: var(--panel-and-palette-icon-size) !important;
+	--panel-subview-body-padding-block: 5px !important;
+	--arrowpanel-menuitem-margin-inline: 5px !important;
+	--panel-separator-margin-vertical: 5px !important;
+	--panel-separator-margin-horizontal: 9px !important;
+	--panel-separator-margin: var(--panel-separator-margin-vertical) var(--panel-separator-margin-horizontal) !important;
+	--arrowpanel-menuitem-padding-block: 0 !important;
+	--arrowpanel-menuitem-padding-inline: 9px !important;
+	--panel-separator-zap-gradient: none !important;
+	--default-focusring: none !important;
+	--toolbarbutton-inner-padding: calc((var(--urlbar-min-height) - 16px) / 2) !important;
+	--toolbarbutton-icon-fill: color-mix(in srgb, currentColor 70%, transparent) !important;
+	--toolbarbutton-hover-background: var(--neptune-item-hover-background) !important;
+	--toolbarbutton-active-background: var(--neptune-item-active-background) !important;
+	--button-background-color: var(--neptune-item-background) !important;
+	--button-background-color-hover: var(--neptune-item-hover-background) !important;
+	--button-background-color-active: var(--neptune-item-active-background) !important;
+	--color-accent-primary: var(--theme-primary-color) !important;
+	--color-accent-primary-hover: var(--theme-primary-hover-color) !important;
+	--color-accent-primary-active: var(--theme-primary-active-color) !important;
+	--button-text-color-primary: #fff !important;
+	--button-background-color-primary: var(--theme-primary-color) !important;
+	--button-background-color-primary-hover: var(--theme-primary-hover-color) !important;
+	--button-background-color-primary-active: var(--theme-primary-active-color) !important;
+	--in-content-button-background: var(--neptune-item-background) !important;
+	--in-content-button-background-hover: var(--neptune-item-hover-background) !important;
+	--in-content-button-background-active: var(--neptune-item-active-background) !important;
+	--in-content-primary-button-text-color: #fff !important;
+	--in-content-primary-button-background: var(--theme-primary-color) !important;
+	--in-content-primary-button-background-hover: var(--theme-primary-hover-color) !important;
+	--in-content-primary-button-background-active: var(--theme-primary-active-color) !important;
+	--link-color: light-dark(#909090, #7c7c7c) !important;
+	--icon-color: light-dark(#383838, #ececec) !important;
+	--theme-menupopup-background: light-dark(#f0f0f0, #323232);
+	--tab-loading-fill: var(--theme-primary-color) !important;
+	--download-progress-fill-color: var(--theme-primary-color) !important;
+	--toolbarbutton-icon-fill-attention: var(--theme-primary-color) !important;
+	--toolbar-field-focus-background-color: var(--neptune-item-active-background) !important;
+	--in-content-page-background: var(--neptune-main-background) !important;
+	--in-content-box-background: var(--neptune-input-bgcolor) !important;
+	--in-content-box-border-color: var(--neptune-toolbar-border-color) !important;
+	--tabpanel-background-color: transparent !important;
+	--sidebar-box-background: var(--neptune-sidebar-box-background) !important;
+	--sidebar-background-color: var(--neptune-toolbar-background) !important;
+	--sidebar-border-color: var(--neptune-sidebar-border-color) !important;
+	--urlbar-box-bgcolor: transparent !important;
+	--urlbar-box-focus-bgcolor: transparent !important;
+	--urlbarView-action-button-background-color: var(--neptune-urlbarView-button-background) !important;
+	--urlbarView-hover-background: var(--neptune-urlbarView-hover-background) !important;
+	--urlbarView-highlight-background: var(--neptune-focused-urlbar-highlight-color) !important;
+	--urlbarView-highlight-color: #fff !important;
+	--input-bgcolor: var(--neptune-input-bgcolor) !important;
+	--background-color-box: var(--input-bgcolor) !important;
+	--focus-outline-color: var(--theme-primary-color) !important;
+	--arrowpanel-color: FieldText !important;
+	--arrowpanel-background: var(--neptune-menu-background) !important;
+	--arrowpanel-border-color: var(--neptune-toolbar-border-color) !important;
+	--organizer-toolbar-background: var(--neptune-main-background) !important;
+	--organizer-pane-background: var(--neptune-main-background) !important;
+	--organizer-content-background: var(--neptune-menu-background) !important;
+	--organizer-hover-background: var(--neptune-item-hover-background) !important;
+}
+
+/*---------- Toolbox ----------*/
+:root#main-window {
+	min-width: 650px !important;
+}
+
+#navigator-toolbox {
+	display: grid;
+	grid-template-columns: minmax(auto, 0) auto;
+	background-color: var(--neptune-toolbar-background) !important;
+	border: none !important;
+
+	> *:not(#nav-bar, #TabsToolbar) {
+		grid-column: 1 / span 2;
+		}

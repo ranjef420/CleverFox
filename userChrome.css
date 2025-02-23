@@ -4,8 +4,8 @@
 @import url("core/toolbar/personalbar.css");
 @import url("core/toolbar/tabbar.css");
 @import url("core/toolbar/urlbar.css");
-@import url("core/browser.css");
 @import url("core/popup.css");
+@import url("core/browser.css");
 @import url("core/tree.css");
 
 /* Buttons */
@@ -30,17 +30,15 @@
 @import url("sidebery/sidebery.css");
 
 /* Tweaks */
+@import url("tweaks/popup-search.css");
 @import url("tweaks/drag-window-headerbar-buttons.css");
 @import url("tweaks/hide-tabs-bar.css");
 @import url("tweaks/hide-window-buttons.css");
 @import url("tweaks/icons-tweaks.css");
 @import url("tweaks/ui-tweaks.css");
 
-/* Import custom stylesheet instead of modifying Poseidon theme files. */
-@import url("custom.css");
-
 /* Enable macOS translucency */
-@import url("tweaks/  ("macos/mac-translucent.css") (-moz-bool-pref: "uc.tweak.mac-translucent");
+@import url("macos/mac-translucent.css") (-moz-bool-pref: "uc.tweak.mac-translucent");
 
 /* Import custom stylesheet instead of modifying the theme files. */
 @import url("custom.css");

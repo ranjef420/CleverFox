@@ -5,4 +5,4 @@
 @import url("sidebery/sidebery-theme.css") (-moz-bool-pref: "af.sidebery.edgyarc-theme");
 
 /* Incorporate Poseidon’s Sidebery-specific CSS */
-@import url("sidebery/sidebery.css");
+@import url("tweaks/sidebery.css");

@@ -1,9 +1,6 @@
 /* Posiedon */
-@import url("content/common.css");
-@import url("content/newtab.css");
-
-/* Incorporate Poseidon’s Sidebery-specific CSS */
-@import url("tweaks/sidebery.css");
+@import url("core/common.css");
+@import url("core/newtab.css");
 
 /* GlassFox UserContent.css */
 /*

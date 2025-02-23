@@ -1,27 +1,98 @@
-/* Poseidon main files */
-@import url("icons/icons.css");
-@import url("toolbar/tabbar.css");
-@import url("toolbar/navbar.css");
-@import url("toolbar/personalbar.css");
-@import url("toolbar/findbar.css");
-@import url("toolbar/urlbar.css");
-@import url("global/colors.css");
-@import url("global/popup.css");
-@import url("global/browser.css");
-@import url("global/tree.css");
+/* Core Styles */
+@import url("core/toolbar/findbar.css");
+@import url("core/toolbar/navbar.css");
+@import url("core/toolbar/personalbar.css");
+@import url("core/toolbar/tabbar.css");
+@import url("core/toolbar/urlbar.css");
+@import url("core/browser.css");
+@import url("core/main.css");
+@import url("core/popup.css");
+@import url("core/tree.css");
 
-/* Poseidon tweaks */
-@import url("global/tweaks.css");
-@import url("tweaks/hide-tabs-bar.css") (-moz-bool-pref: "uc.tweak.hide-tabs-bar");
+/* Buttons */
+@import url("core/buttons/replace-buttons.css");
+@import url("core/buttons/rounded-title-buttons.css");
+@import url("core/buttons/title-buttons.css");
+
+/* Icons */
+@import url("core/icons/icons-v1.css");
+@import url("core/icons/replace-icons.css");
+@import url("core/icons/symbolic-tab-icons.css");
+@import url("core/icons/system-icons.css");
+@import url("core/menus/enhance_context_menu.css");
+@import url("core/menus/iconized_content_context_menu.css");
+@import url("core/menus/iconized_main_menu.css");
+@import url("core/menus/iconized_places_context_menu.css");
+@import url("core/menus/iconized_tabs_context_menu.css");
+@import url("core/menus/iconized_textbox_context_menu.css");
+
+/* macOS Integration */
+@import url("macos/translucent-base.css");
+@import url("macos/translucent-poseidon.css");
+
+/* Sidebery */
+@import url("sidebery/autohide-sidebar-modified.css");
+@import url("sidebery/sidebery-tweaks.css");
+@import url("sidebery/sidebery.css");
+
+/* Tweaks */
+@import url("tweaks/drag-window-headerbar-buttons.css");
+@import url("tweaks/hide-tabs-bar.css");
+@import url("tweaks/hide-window-buttons.css");
+@import url("tweaks/icons-tweaks.css");
+@import url("tweaks/ui-tweaks.css");
+@import url("tweaks/urlbar-tweaks.css");
 
 /* Import custom stylesheet instead of modifying Poseidon theme files. */
 @import url("custom.css");
 
-/* Integrate Poseidon’s icon size and spacing rules */
-@import url("Poseidon/icons.css");
+/* ========== COMMENTED OUT: Shimmer, Neptune, Arc, & GlassFox ========== */
 
-/* Add new or revise current CSS for Poseidon's “New Tab” button */
-@import url("Poseidon/main.css");
+/* Arc Framework */
+/*
+@import url("src/arc/arc-browser.css");
+@import url("src/arc/arc-extensions.css");
+@import url("src/arc/arc-mac-translucent.css");
+@import url("src/arc/arc-popup-search.css");
+@import url("src/arc/arc-popup.css");
+@import url("src/arc/arc-sidebery.css");
+@import url("src/arc/arc-tweaks.css");
+@import url("src/arc/arc-urlbar.css");
+@import url("src/arc/arc-urlbar_better.css");
+@import url("src/arc/autohide-sidebar-modified.css");
+@import url("src/arc/sidebar_integration.css");
+*/
+
+/* Neptune */
+/*
+@import url("src/neptune/hide-single-tab.css");
+@import url("src/neptune/hide-tabs-bar.css");
+@import url("src/neptune/mac-native-tabbar.css");
+@import url("src/neptune/mac-translucent.css");
+@import url("src/neptune/popup-search.css");
+@import url("src/neptune/toolbox.css");
+@import url("src/neptune/userChome/neptune-TitleToolPersonal-bar.css");
+@import url("src/neptune/userChome/neptune-buttons.css");
+@import url("src/neptune/userChome/neptune-dialogs-browser-icons.css");
+@import url("src/neptune/userChome/neptune-findbar.css");
+@import url("src/neptune/userChome/neptune-hidden.css");
+@import url("src/neptune/userChome/neptune-navbar.css");
+@import url("src/neptune/userChome/neptune-popups.css");
+@import url("src/neptune/userChome/neptune-searchbar.css");
+@import url("src/neptune/userChome/neptune-sidebar.css");
+@import url("src/neptune/userChome/neptune-tabs-bar.css");
+@import url("src/neptune/userChome/neptune-urlbar.css");
+@import url("src/neptune/userChome/neptune-userChrome-root-only.css");
+*/
+
+/* Shimmer */
+/*
+@import url("src/shimmer/shimmer-findbar-variables.css");
+@import url("src/shimmer/shimmer-macos-buttons.css");
+@import url("src/shimmer/shimmer-other-variables.css");
+@import url("src/shimmer/shimmer-urlbar-variables.css");
+@import url("src/shimmer/shimmer-winctr-urlbar-row.css");
+*/
 
 /* Integrate Poseidon’s icon size and spacing rules */
 #navigator-toolbox .toolbarbutton-1 .toolbarbutton-icon {
@@ -90,7 +161,7 @@
   margin: 0 4px !important;
 }
 
-/* Add new or revise current CSS for Poseidon's “New Tab” button */
+/* Add Poseidon's “New Tab” button */
 .TabsPanel .new-tab-btns {
   padding-top: calc(var(--tabs-margin) + 1px) !important;
 }

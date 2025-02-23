@@ -1,0 +1,99 @@
+/* Poseidon Color Definitions (Based on ArcWTF & Neptune) */
+
+/* Define colors dynamically based on the system theme */
+:root:not(:-moz-lwtheme),
+:root:not([lwtheme]) {
+  /* Main Background - True Black for Dark Mode */
+  --lwt-accent-color: light-dark(var(--neptune-main-background, #f6f6f6), var(--neptune-main-background, #000000)) !important;
+
+  /* Toolbar */
+  --toolbar-bgcolor: light-dark(var(--neptune-toolbar-background, #f7f7f7), var(--neptune-toolbar-background, #000000)) !important;
+  --toolbar-color: light-dark(#000, #fff) !important;
+  --toolbarbutton-icon-fill: var(--toolbar-color) !important;
+
+  /* Sidebar */
+  --sidebar-background-color: light-dark(var(--neptune-sidebar-box-background, #f7f7f7), var(--neptune-sidebar-box-background, #000000)) !important;
+  --sidebar-text-color: light-dark(#000, #fff) !important;
+  --sidebar-border-color: light-dark(var(--neptune-sidebar-border-color, #bfbfbf), var(--neptune-sidebar-border-color, #686868)) !important;
+
+  /* Popup Menus */
+  --arrowpanel-background: light-dark(var(--neptune-menu-background, #fff), var(--neptune-menu-background, #000000)) !important;
+  --arrowpanel-color: light-dark(#1c1c1c, #fff) !important;
+}
+
+  /* Tabs */
+  --tab-selected-bgcolor: light-dark(var(--neptune-tab-background, var(--toolbar-bgcolor)), var(--neptune-tab-background, var(--toolbar-bgcolor))) !important;
+  --tab-hover-bgcolor: light-dark(var(--neptune-tab-hover-background, var(--tab-selected-bgcolor)), var(--neptune-tab-hover-background, var(--tab-selected-bgcolor))) !important;
+  --tab-active-bgcolor: light-dark(var(--neptune-tab-active-background, var(--tab-selected-bgcolor)), var(--neptune-tab-active-background, var(--tab-selected-bgcolor))) !important;
+
+  /* URL Bar Suggestions */
+  --link-color: light-dark(var(--neptune-focused-urlbar-highlight-color, #0078D4), var(--neptune-focused-urlbar-highlight-color, #75B6E8)) !important;
+  --uc-urlbarView-accent-color: light-dark(var(--neptune-urlbarView-button-background, #1A6397), var(--neptune-urlbarView-button-background, #75B6E8)) !important;
+  --urlbarView-highlight-background: light-dark(var(--neptune-urlbarView-hover-background, #F2F2F2), var(--neptune-urlbarView-hover-background, #383838)) !important;
+  --urlbarView-highlight-color: light-dark(#000, #fff) !important;
+  --urlbarView-hover-background: light-dark(var(--neptune-urlbar-hover-background, #e5e5e5), var(--neptune-urlbar-hover-background, #444444)) !important;
+  --urlbarView-separator-color: light-dark(var(--neptune-popover-separator-color, #EFEFEF), var(--neptune-popover-separator-color, #5F5F5F)) !important;
+
+  /* Menus/Panels */
+  --arrowpanel-background: light-dark(var(--neptune-menu-background, #fff), var(--neptune-menu-background, #4A4A4A)) !important;
+  --arrowpanel-color: light-dark(#1c1c1c, #fff) !important;
+  --arrowpanel-border-color: light-dark(var(--neptune-menu-shadow-color, #fff), var(--neptune-menu-shadow-color, #636363)) !important;
+  --arrowpanel-dimmed: light-dark(#565656, #565656) !important;
+  --arrowpanel-dimmed-further: light-dark(#707070, #707070) !important;
+  --panel-separator-color: light-dark(#dadada, #636363) !important;
+  --panel-description-color: light-dark(#000a, #fffb) !important;
+  --panel-disabled-color: light-dark(#9E9E9E, #ABABAA) !important;
+  --panel-item-hover-bgcolor: light-dark(var(--neptune-item-hover-background, #eee), var(--neptune-item-hover-background, #646464)) !important;
+  --panel-item-active-bgcolor: light-dark(var(--neptune-item-active-background, #ddd), var(--neptune-item-active-background, #747474)) !important;
+  --panel-banner-item-update-supported-bgcolor: light-dark(#188038, #81C995) !important;
+
+  /* Primary Button */
+  --button-primary-bgcolor: light-dark(var(--theme-primary-color, #0078D4), var(--theme-primary-color, #006CBE)) !important;
+  --button-primary-color: light-dark(#fff, #fff) !important;
+  --button-primary-hover-bgcolor: light-dark(var(--theme-primary-hover-color, #006BBD), var(--theme-primary-hover-color, #1C7CC5)) !important;
+  --button-primary-active-bgcolor: light-dark(var(--theme-primary-active-color, #0060AA), var(--theme-primary-active-color, #3289CB)) !important;
+
+  /* Secondary Button */
+  --button-bgcolor: light-dark(var(--neptune-item-background, #EFEFEF), var(--neptune-item-background, #5C5C5C)) !important;
+  --button-color: light-dark(#000, #fff) !important;
+  --button-hover-bgcolor: light-dark(var(--neptune-item-hover-background, #D5D5D5), var(--neptune-item-hover-background, #6E6E6E)) !important;
+  --button-active-bgcolor: light-dark(var(--neptune-item-active-background, #C0C0C0), var(--neptune-item-active-background, #7C7C7C)) !important;
+}
+
+/* Text input field, e.g. bookmarks editor */
+  --focus-outline-color: light-dark(var(--neptune-input-outline-color, #0055D780), var(--neptune-input-outline-color, #63ADE5)) !important;
+  --input-bgcolor: light-dark(var(--neptune-input-bgcolor, #fff), var(--neptune-input-bgcolor, #000000)) !important;
+  --input-color: light-dark(#2b2b2b, #fff) !important;
+  --input-border-color: light-dark(var(--neptune-checkbox-border, #bebebe), var(--neptune-checkbox-border, #808080)) !important;
+  --error-text-color: light-dark(#FF9AA2, #FF9AA2) !important;
+  --input-error-border-color: light-dark(#FF848A, #FF848A) !important;
+
+  /* Side bar colours. */
+  --sidebar-background-color: light-dark(var(--neptune-sidebar-box-background, #f7f7f7), var(--neptune-sidebar-box-background, #000000)) !important;
+  --sidebar-text-color: light-dark(#000, #fff) !important;
+  --sidebar-border-color: light-dark(var(--neptune-sidebar-border-color, #bfbfbf), var(--neptune-sidebar-border-color, #686868)) !important;
+
+  /* ::::: Dialog theme ::::: */
+  & #window-modal-dialog::backdrop {
+    /* Overlay when dialog is shown. */
+    background-color: rgb(0 0 0 / .2) !important;
+  }
+
+    &[dialogroot] {
+    /* Dialog */
+    --in-content-page-background: var(--arrowpanel-background) !important;
+    --in-content-page-color: var(--arrowpanel-color) !important;
+    /* Primary button */
+    --in-content-primary-button-text-color: var(--button-primary-color) !important;
+    --in-content-primary-button-background: var(--button-primary-bgcolor) !important;
+    --in-content-primary-button-background-hover: var(--button-primary-hover-bgcolor) !important;
+    --in-content-primary-button-background-active: var(--button-primary-active-bgcolor) !important;
+    /* Secondary button */
+    --in-content-button-text-color: var(--button-color) !important;
+    --in-content-button-background: var(--button-bgcolor) !important;
+    --in-content-button-background-hover: var(--button-hover-bgcolor) !important;
+    --in-content-button-background-active: var(--button-active-bgcolor) !important;
+    /* Text input */
+    --in-content-box-background: light-dark(var(--neptune-input-bgcolor, #fff), var(--neptune-input-bgcolor, #000000)) !important;
+    --in-content-box-border-color: light-dark(var(--neptune-checkbox-border, #bebebe), var(--neptune-checkbox-border, #808080)) !important;
+  }

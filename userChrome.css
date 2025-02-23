@@ -1,0 +1,136 @@
+/* Edge-Frfox main files */
+@import url("icons/icons.css");
+@import url("toolbar/tabbar.css");
+@import url("toolbar/navbar.css");
+@import url("toolbar/personalbar.css");
+@import url("toolbar/findbar.css");
+@import url("toolbar/urlbar.css");
+@import url("global/colors.css");
+@import url("global/popup.css");
+@import url("global/browser.css");
+@import url("global/tree.css");
+
+/* Edge-Frfox tweaks */
+@import url("global/tweaks.css");
+@import url("tweaks/hide-tabs-bar.css") (-moz-bool-pref: "uc.tweak.hide-tabs-bar");
+
+/* Import custom stylesheet instead of modifying Edge-Frfox theme files. */
+@import url("custom.css");
+
+/* Integrate EdgyArc-Fr’s icon size and spacing rules */
+@import url("EdgyArc-fr/icons.css");
+
+/* Add new or revise current CSS for EdgyArc-fr's “New Tab” button */
+@import url("EdgyArc-fr/main.css");
+
+/* Integrate EdgyArc-Fr’s icon size and spacing rules */
+#navigator-toolbox .toolbarbutton-1 .toolbarbutton-icon {
+  width: 26px !important;
+  height: 26px !important;
+  padding: 4px !important;
+}
+
+#navigator-toolbox .toolbarbutton-1 .toolbarbutton-badge {
+  font-size: 10px !important;
+  margin-top: -2px !important;
+  margin-bottom: 2px !important;
+}
+
+#urlbar .urlbar-icon {
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 4px !important;
+}
+
+#urlbar .urlbar-page-action {
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 4px !important;
+}
+
+#urlbar .urlbar-input-box {
+  padding: 0 4px !important;
+}
+
+#urlbar .urlbar-textbox {
+  font-size: 14px !important;
+}
+
+#urlbar .urlbar-view {
+  padding: 4px !important;
+}
+
+#urlbar .urlbar-view-row {
+  padding: 4px !important;
+}
+
+#urlbar .urlbar-view-row-inner {
+  padding: 4px !important;
+}
+
+#urlbar .urlbar-view-row .urlbar-view-favicon {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 4px !important;
+}
+
+#urlbar .urlbar-view-row .urlbar-view-title {
+  font-size: 14px !important;
+  margin: 0 4px !important;
+}
+
+#urlbar .urlbar-view-row .urlbar-view-url {
+  font-size: 12px !important;
+  margin: 0 4px !important;
+}
+
+#urlbar .urlbar-view-row .urlbar-view-action {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 4px !important;
+}
+
+/* Add new or revise current CSS for EdgyArc-fr's “New Tab” button */
+.TabsPanel .new-tab-btns {
+  padding-top: calc(var(--tabs-margin) + 1px) !important;
+}
+
+.TabsPanel .new-tab-btns::before {
+  width: calc(100% - var(--tabs-margin)*2) !important;
+  inset-inline: auto !important;
+  top: 0 !important;
+  border-top: 1px solid var(--separator-color) !important;
+  box-shadow: none !important;
+}
+
+.TabsPanel .new-tab-btns[data-new-tab-bar-position="after_tabs"]:first-child {
+  padding-top: 0 !important;
+}
+
+.TabsPanel .new-tab-btns[data-new-tab-bar-position="after_tabs"]:first-child::before {
+  display: none !important;
+}
+
+.TabsPanel .new-tab-btns::after {
+  content: initial !important;
+}
+
+.TabsPanel .new-tab-btns .new-tab-btn {
+  justify-content: start !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  border-radius: var(--tabs-border-radius) !important;
+}
+
+.TabsPanel .new-tab-btns .new-tab-btn > svg,
+.TabsPanel .new-tab-btns .new-tab-btn > img {
+  position: static !important;
+  margin: 0 calc(var(--tabs-inner-gap) + 2px) 0 var(--tabs-inner-gap) !important;
+  flex-shrink: 0 !important;
+}
+
+.TabsPanel .new-tab-btns .new-tab-btn::after {
+  content: "New Tab" !important;
+  font: var(--tabs-font) !important;
+  color: var(--frame-fg) !important;
+}

@@ -1,0 +1,36 @@
+/* Basic Transparency */
+:root {
+  @media not (prefers-reduced-transparency) {
+    @media not (-moz-bool-pref: "uc.transparency.disabled") {
+      appearance: -moz-sidebar !important;
+    }
+  }
+}
+
+/* macOS Dock-like magnification for sidebar */
+@media (-moz-bool-pref: "glassfox.sidebar.magnification-enabled") and (-moz-bool-pref: "sidebar.verticalTabs") {
+  sidebar-main:not([expanded]) {
+    #vertical-tabs {
+      overflow: visible !important;
+    }
+    #tabbrowser-tabs {
+      overflow: visible clip !important;
+      width: min-content;
+      & > :has(tab) {
+        & > tab {
+          &:has(+tab+tab:hover),
+                    &:is(tab:hover+tab+tab) {
+            --tab-scale:  1.05;
+          }
+          &:has(+tab:hover),
+          &:is(tab:hover+tab) {
+            --tab-scale: 1.25;
+          }
+          &:hover {
+            --tab-scale: 1.5;
+          }
+        }
+      }
+    }
+  }
+}

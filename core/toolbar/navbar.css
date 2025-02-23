@@ -40,3 +40,43 @@
 #nav-bar.browser-toolbar .toolbarbutton-icon { &:-moz-window-inactive {opacity: 0.5 !important;} }
 #titlebar .titlebar-buttonbox-container .titlebar-buttonbox { &:-moz-window-inactive {opacity: 0.5 !important;} }
 #nav-bar.browser-toolbar #urlbar-container { &:-moz-window-inactive {opacity: 0.5 !important;} }
+
+/*---------- Navbar ----------*/
+#nav-bar {
+		grid-area: 1 / 1 / span 1 / span 1;
+		width: fit-content;
+		background-color: transparent !important;
+		padding: var(--theme-browser-toolbox-padding) 0 var(--theme-browser-toolbox-padding) calc(92px - var(--toolbar-start-end-padding) / 2) !important;
+		border: none !important;
+
+		> .customization-target:not(#widget-overflow-fixed-list) {
+			> toolbarpaletteitem[place=toolbar][id^=wrapper-customizableui-special-spring], toolbarspring {
+				max-width: 100% !important;
+
+				#nav-bar & {
+					flex-grow: 400 !important;
+				}
+			}
+
+			 > toolbarpaletteitem[place="toolbar"] > toolbarspring {
+				margin-block: 0 !important;
+			}
+
+			:root[customizing] & {
+				animation: emeTeachingMoment 1s linear infinite;
+			}
+		}
+
+		:root[inFullscreen] & {
+			padding-inline-start: var(--toolbar-start-end-padding) !important;
+		}
+
+		:is(#reload-button, #stop-button) > .toolbarbutton-animatable-box > .toolbarbutton-animatable-image {
+			animation-duration: 0s !important;
+		}
+
+		@media (-moz-bool-pref: "sidebar.verticalTabs") {
+			grid-column: 1 / span 2;
+			width: auto;
+		}
+	}

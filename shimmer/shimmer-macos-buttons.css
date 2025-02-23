@@ -1,0 +1,75 @@
+/*! === compact, macos-like winctr buttons === */
+@media not (-moz-bool-pref: "shimmer.disable-compact-winctr-buttons") {
+	#toolbar-menubar .titlebar-buttonbox > toolbarbutton {
+		&:hover > image {
+			padding: 2px 0 !important;
+		}
+	}
+
+	#TabsToolbar .titlebar-buttonbox > toolbarbutton {
+		&:hover > image {
+			padding: 4px 0 !important;
+		}
+	}
+
+	.titlebar-buttonbox > toolbarbutton {
+		background: rgba(0, 0, 0, 0) !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	
+		& > image {
+			width: 14px !important;
+			height: 14px !important;
+			border-radius: 12px !important;
+			transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+			list-style-image: none !important;
+			box-sizing: content-box !important;
+			padding: 0px !important;
+			background: var(--toolbarbutton-hover-background) !important;
+		}
+	
+		&:hover > image {
+			transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+		}
+	}
+	.titlebar-close {
+		/* background: hsl(355, 86%, 49%) url(chrome://browser/skin/window-controls/close.svg) no-repeat center !important; */
+		&:hover > image {
+			background: #fc5753 !important;
+		}
+		padding-right: calc(var(--shimmer-winctr-gap) + var(--shimmer-winctr-margin)) !important;
+		padding-left: var(--shimmer-winctr-gap) !important;
+	}
+	.titlebar-min {
+		&:hover > image {
+			background: #fdbc40 !important;
+		}
+		padding-left: calc(var(--shimmer-winctr-gap) + var(--shimmer-winctr-margin)) !important;
+		padding-right: var(--shimmer-winctr-gap) !important;
+	}
+	.titlebar-max, .titlebar-restore {
+		&:hover > image {
+			background: #33c748 !important;
+		}
+		padding: 0 var(--shimmer-winctr-gap) !important;
+	}
+	@media not (-moz-bool-pref: "shimmer.reverse-winctr-buttons-side") {
+		#main-window[titlepreface="​"] #toolbar-menubar:not([inactive]) #PanelUI-menu-button {
+			padding-right: 0 !important;
+		}
+		@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+			#toolbar-menubar:not([inactive]) #PanelUI-menu-button {
+				padding-right: 0 !important;
+			}
+		}
+	}
+	/* .titlebar-buttonbox-container {
+		margin: 0 var(--shimmer-winctr-margin) 0 0 !important;
+	} */
+}
+
+@media (-moz-bool-pref: "shimmer.remove-winctr-buttons") {
+	.titlebar-buttonbox, .titlebar-spacer[type="post-tabs"] {
+		display: none !important;
+	}
+}

@@ -1,4 +1,4 @@
-/* Edge-Frfox main files */
+/* Poseidon main files */
 @import url("icons/icons.css");
 @import url("toolbar/tabbar.css");
 @import url("toolbar/navbar.css");
@@ -10,20 +10,20 @@
 @import url("global/browser.css");
 @import url("global/tree.css");
 
-/* Edge-Frfox tweaks */
+/* Poseidon tweaks */
 @import url("global/tweaks.css");
 @import url("tweaks/hide-tabs-bar.css") (-moz-bool-pref: "uc.tweak.hide-tabs-bar");
 
-/* Import custom stylesheet instead of modifying Edge-Frfox theme files. */
+/* Import custom stylesheet instead of modifying Poseidon theme files. */
 @import url("custom.css");
 
-/* Integrate EdgyArc-Fr’s icon size and spacing rules */
-@import url("EdgyArc-fr/icons.css");
+/* Integrate Poseidon’s icon size and spacing rules */
+@import url("Poseidon/icons.css");
 
-/* Add new or revise current CSS for EdgyArc-fr's “New Tab” button */
-@import url("EdgyArc-fr/main.css");
+/* Add new or revise current CSS for Poseidon's “New Tab” button */
+@import url("Poseidon/main.css");
 
-/* Integrate EdgyArc-Fr’s icon size and spacing rules */
+/* Integrate Poseidon’s icon size and spacing rules */
 #navigator-toolbox .toolbarbutton-1 .toolbarbutton-icon {
   width: 26px !important;
   height: 26px !important;
@@ -90,7 +90,7 @@
   margin: 0 4px !important;
 }
 
-/* Add new or revise current CSS for EdgyArc-fr's “New Tab” button */
+/* Add new or revise current CSS for Poseidon's “New Tab” button */
 .TabsPanel .new-tab-btns {
   padding-top: calc(var(--tabs-margin) + 1px) !important;
 }

@@ -1,0 +1,61 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		/* --- Browser --- */
+		--poseidon-main-background: #f6f6f6;
+		--poseidon-content-background: #fff;
+		--theme-primary-color: color-mix(in srgb, accentcolor 80%, #181818);
+		--theme-primary-hover-color: color-mix(in srgb, accentcolor 85%, #262626);
+		--theme-primary-active-color: color-mix(in srgb, accentcolor 85%, #646464);
+
+		/* --- Toolbars --- */
+		--poseidon-toolbar-background: var(--lwt-accent-color);
+		--poseidon-toolbar-border-color: color-mix(in srgb, currentColor 20%, transparent);
+		--poseidon-input-bgcolor: color-mix(in srgb, currentColor 10%, transparent);
+		--poseidon-input-outline-color: color-mix(in srgb, accentcolor 50%, #f2f2f2);
+		--poseidon-slider-color: #fff;
+		--poseidon-slider-track-color: color-mix(in srgb, currentColor 15%, transparent);
+		--poseidon-checkbox-border: 1px solid #bcbcbc;
+		--poseidon-checkbox-shadow: inset 0 1px 1px #00000026;
+		--poseidon-item-background: color-mix(in srgb, currentColor 10%, transparent);
+		--poseidon-item-hover-background: color-mix(in srgb, currentColor 8%, transparent);
+		--poseidon-item-active-background: color-mix(in srgb, currentColor 14%, transparent);
+		--poseidon-item-selection-background: color-mix(in srgb, accentcolor 30%, transparent);
+		--poseidon-item-selection-hover-background: color-mix(in srgb, accentcolor 15%, transparent);
+		--poseidon-button-field-color: color-mix(in srgb, currentColor 60%, transparent);
+		--poseidon-button-field-hover-color: color-mix(in srgb, currentColor 80%, transparent);
+
+		/* --- Sidebar --- */
+		--poseidon-sidebar-box-background: color-mix(in srgb, currentColor 5%, transparent);
+		--poseidon-sidebar-border-color: color-mix(in srgb, currentColor 8%, transparent);
+
+		/* --- Popups --- */
+		--poseidon-menu-background: #f0f0f0;
+		--poseidon-popover-background: #ececec66;
+		--poseidon-popover-separator-color: color-mix(in srgb, currentColor 12%, transparent);
+		--poseidon-small-shadow: 0 0 1px color-mix(in srgb, currentColor 40%, transparent);
+		--poseidon-menu-shadow: 0 1px 8px #00000019, 0 5px 15px #00000016, 0 8px 20px #00000011, 0 3px 22px #00000016;
+		--poseidon-menu-shadow-color: #00000026;
+		--poseidon-panel-shadow: 0 1px 8px #00000019, 0 5px 15px #00000016, 0 8px 20px #00000009;
+		--poseidon-panel-shadow-color: #00000016;
+
+		/* --- Urlbar --- */
+		--poseidon-urlbar-background: color-mix(in srgb, currentColor 10%, transparent);
+		--poseidon-urlbar-hover-background: color-mix(in srgb, currentColor 12%, transparent);
+		--poseidon-urlbar-focused-background: color-mix(in srgb, currentColor 16%, transparent);
+		--poseidon-urlbarView-hover-background: color-mix(in srgb, accentcolor 85%, #262626);
+		--poseidon-urlbarView-button-background: color-mix(in srgb, accentcolor 70%, #939597);
+		--poseidon-focused-urlbar-highlight-color: color-mix(in srgb, accentcolor 85%, #383838);
+
+		/* --- Tabs --- */
+		--poseidon-tab-background: color-mix(in srgb, currentColor 10%, transparent);
+		--poseidon-tab-hover-background: color-mix(in srgb, currentColor 15%, transparent);
+		--poseidon-tab-active-background: color-mix(in srgb, currentColor 18%, transparent);
+		--poseidon-tab-unloaded-background: color-mix(in srgb, currentColor 5%, transparent);
+		--poseidon-tab-selected-background: color-mix(in srgb, accentcolor 20%, transparent);
+		--poseidon-verticaltab-background: color-mix(in srgb, currentColor 2%, transparent);
+		--poseidon-verticaltab-pinned-background: color-mix(in srgb, currentColor 6%, transparent);
+		--poseidon-verticaltab-hover-background: color-mix(in srgb, currentColor 8%, transparent);
+		--poseidon-tab-soundplaying-background: color-mix(in srgb, accentcolor 15%, transparent);
+		--poseidon-verticaltab-soundplaying-background: color-mix(in srgb, accentcolor 10%, transparent);
+	}
+}

@@ -5,19 +5,27 @@
 @import url("core/toolbar/tabbar.css");
 @import url("core/toolbar/urlbar.css");
 @import url("core/popup.css");
+@import url("tweaks/popup-search.css");
 @import url("core/browser.css");
+@import url("core/colors.css");
+@import url("core/common.css");
+@import url("core/newtab.css");
 @import url("core/tree.css");
+@import url("core/tweaks.css");
 
 /* Buttons */
 @import url("core/buttons/replace-buttons.css");
 @import url("core/buttons/rounded-title-buttons.css");
 @import url("core/buttons/title-buttons.css");
 
-/* Icons */
-@import url("core/icons/icons-v1.css");
+/* Icons - All CSS files in directory must be merged and integrated into final 'icons.css'*/
+@import url("core/icons/icons.css");
 @import url("core/icons/replace-icons.css");
 @import url("core/icons/symbolic-tab-icons.css");
 @import url("core/icons/system-icons.css");
+@import url("core/icons/icons-src/icons-v1.css");
+
+/* Context Menu - All CSS files in directory must be merged and integrated into final 'enhance_context_menu.css'*/
 @import url("core/menus/enhance_context_menu.css");
 @import url("core/menus/iconized_content_context_menu.css");
 @import url("core/menus/iconized_main_menu.css");
@@ -26,67 +34,38 @@
 @import url("core/menus/iconized_textbox_context_menu.css");
 
 /* Sidebery */
-@import url("sidebery/sidebery-tweaks.css");
-@import url("sidebery/sidebery.css");
+@import url("sidebery/sidebar.css");
 
 /* Tweaks */
-@import url("tweaks/popup-search.css");
-@import url("tweaks/drag-window-headerbar-buttons.css");
-@import url("tweaks/hide-tabs-bar.css");
-@import url("tweaks/hide-window-buttons.css");
-@import url("tweaks/icons-tweaks.css");
-@import url("tweaks/ui-tweaks.css");
+@import url("tweaks/drag-window-headerbar-buttons.css") (-moz-bool-pref: "uc.tweak.mac-buttons");
+@import url("tweaks/hide-tabs-bar.css") (-moz-bool-pref: "uc.tweak.hide-tabbar");
+@import url("tweaks/hide-window-buttons.css"); (-moz-bool-pref: "uc.tweak.hide-winctr-buttons");
 
-/* Enable macOS translucency */
+/* Enable macOS translucency - src CSS files must be checked */
 @import url("macos/mac-translucent.css") (-moz-bool-pref: "uc.tweak.mac-translucent");
+      /* @import url("macos/glassfox-translucency.css")
+      * @import url("macos/glassfox-dim-tabs.css")
+      * @import url("macos/neptune-mac-native-tabbar.css")
+      * @import url("macos/shimmer-macos-buttons.css")
 
-/* Import custom stylesheet instead of modifying the theme files. */
-@import url("custom.css");
-
-/* ========== COMMENTED OUT: Shimmer, Neptune, Arc, & GlassFox ========== */
-
-/* Arc */
-/*
-@import url("src/arc/arc-browser.css");
-@import url("src/arc/arc-extensions.css");
-@import url("src/arc/arc-mac-translucent.css");
-@import url("src/arc/arc-popup-search.css");
-@import url("src/arc/arc-popup.css");
-@import url("src/arc/arc-sidebery.css");
-@import url("src/arc/arc-tweaks.css");
-@import url("src/arc/arc-urlbar.css");
-@import url("src/arc/arc-urlbar_better.css");
-@import url("src/arc/autohide-sidebar-modified.css");
-@import url("src/arc/sidebar_integration.css");
-*/
+/* ========== COMMENTED OUT: Possible Shimmer & Neptune ========== */
 
 /* Neptune */
 /*
-@import url("src/neptune/hide-single-tab.css");
-@import url("src/neptune/hide-tabs-bar.css");
-@import url("src/neptune/mac-native-tabbar.css");
-@import url("src/neptune/mac-translucent.css");
-@import url("src/neptune/popup-search.css");
 @import url("src/neptune/toolbox.css");
 @import url("src/neptune/userChome/neptune-TitleToolPersonal-bar.css");
 @import url("src/neptune/userChome/neptune-buttons.css");
 @import url("src/neptune/userChome/neptune-dialogs-browser-icons.css");
-@import url("src/neptune/userChome/neptune-findbar.css");
 @import url("src/neptune/userChome/neptune-hidden.css");
 @import url("src/neptune/userChome/neptune-navbar.css");
-@import url("src/neptune/userChome/neptune-popups.css");
 @import url("src/neptune/userChome/neptune-searchbar.css");
-@import url("src/neptune/userChome/neptune-sidebar.css");
 @import url("src/neptune/userChome/neptune-tabs-bar.css");
-@import url("src/neptune/userChome/neptune-urlbar.css");
 @import url("src/neptune/userChome/neptune-userChrome-root-only.css");
 */
 
 /* Shimmer */
 /*
 @import url("src/shimmer/shimmer-findbar-variables.css");
-@import url("src/shimmer/shimmer-macos-buttons.css");
 @import url("src/shimmer/shimmer-other-variables.css");
 @import url("src/shimmer/shimmer-urlbar-variables.css");
-@import url("src/shimmer/shimmer-winctr-urlbar-row.css");
 */

@@ -42,7 +42,7 @@
 @import url("tweaks/hide-tabs-bar.css") (-moz-bool-pref: "uc.tweak.hide-tabbar");
 @import url("tweaks/hide-window-buttons.css"); (-moz-bool-pref: "uc.tweak.hide-winctr-buttons");
 
-/* Enable macOS translucency - src CSS files must be checked */
+/* Enable macOS translucency - src CSS files must be checked for compatibility and conflicts. Merge desired features if possible. */
 @import url("macos/mac-translucent.css") (-moz-bool-pref: "uc.tweak.mac-translucent");
       /* @import url("macos/glassfox-translucency.css")
       * @import url("macos/glassfox-dim-tabs.css")

@@ -1,8 +1,8 @@
-/* Edge-Frfox */
+/* Posiedon */
 @import url("content/common.css");
 @import url("content/newtab.css");
 @import url("tweaks/sidebery.css") (-moz-bool-pref: "uc.tweak.theme.sidebery");
-@import url("EdgyArc-fr/sidebery.css") (-moz-bool-pref: "af.sidebery.edgyarc-theme");
+@import url("sidebery/sidebery-theme.css") (-moz-bool-pref: "af.sidebery.edgyarc-theme");
 
-/* Incorporate EdgyArc-Fr’s Sidebery-specific CSS */
-@import url("EdgyArc-fr/sidebery.css");
+/* Incorporate Poseidon’s Sidebery-specific CSS */
+@import url("sidebery/sidebery.css");

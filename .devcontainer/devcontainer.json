@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "git push --set-upstream origin main",
+    "build": "git pull origin merge-neptune-styles --rebase",
     "test": "git push --set-upstream origin main"
   }
 }

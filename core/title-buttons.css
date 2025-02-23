@@ -1,0 +1,136 @@
+@media (prefers-color-scheme: dark) {
+:root #TabsToolbar .titlebar-buttonbox .titlebar-close,
+:root #TabsToolbar #TabsToolbar-close {
+	background: var(--titlebar-close-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox .titlebar-max,
+:root #TabsToolbar #TabsToolbar-max {
+	background: var(--titlebar-maximize-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox .titlebar-min,
+:root #TabsToolbar #TabsToolbar-min {
+	background: var(--titlebar-minimize-dark) no-repeat;
+	background-size: contain;
+}
+:root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox .titlebar-max,
+:root[sizemode="maximized"] #TabsToolbar #TabsToolbar-max {
+	background: var(--titlebar-maximize-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-close,
+:root #TabsToolbar #TabsToolbar-close:hover {
+	background: var(--titlebar-close-hover-inactive-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-max,
+:root #TabsToolbar #TabsToolbar-max:hover {
+	background: var(--titlebar-maximize-hover-inactive-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-min,
+:root #TabsToolbar #TabsToolbar-min:hover {
+	background: var(--titlebar-minimize-hover-inactive-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-close:hover,
+:root #TabsToolbar #TabsToolbar-close:hover {
+	background: var(--titlebar-close-hover-dark) no-repeat;
+	background-size: contain;
+	transition: background-size 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-max:hover,
+:root #TabsToolbar #TabsToolbar-max:hover {
+	background: var(--titlebar-maximize-hover-dark) no-repeat;
+	background-size: contain;
+	transition: background-size 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-min:hover,
+:root #TabsToolbar #TabsToolbar-min:hover {
+	background: var(--titlebar-minimize-hover-dark) no-repeat;
+	background-size: contain;
+	transition: background-size 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+:root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox:hover .titlebar-max,
+:root[sizemode="maximized"] #TabsToolbar #TabsToolbar-max:hover {
+	background: var(--titlebar-unmaximize-hover-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-close:active,
+:root #TabsToolbar #TabsToolbar-close:active {
+	background: var(--titlebar-close-active-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-max:active,
+:root #TabsToolbar #TabsToolbar-max:active {
+	background: var(--titlebar-maximize-active-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar .titlebar-buttonbox:hover .titlebar-min:active,
+:root #TabsToolbar #TabsToolbar-min:active {
+	background: var(--titlebar-minimize-active-dark) no-repeat;
+	background-size: contain;
+}
+:root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox:active .titlebar-max:active,
+:root[sizemode="maximized"] #TabsToolbar #TabsToolbar-max:active {
+	background: var(--titlebar-unmaximize-active-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox .titlebar-close,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-close {
+	background: var(--titlebar-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox .titlebar-max,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-max {
+	background: var(--titlebar-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox .titlebar-min,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-min {
+	background: var(--titlebar-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root[sizemode="maximized"] #TabsToolbar:-moz-window-inactive .titlebar-buttonbox .titlebar-max,
+:root[sizemode="maximized"] #TabsToolbar:-moz-window-inactive #TabsToolbar-max {
+	background: var(--titlebar-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox:hover .titlebar-close,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-close:hover {
+	background: var(--titlebar-close-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox:hover .titlebar-max,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-max:hover {
+	background: var(--titlebar-maximize-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root #TabsToolbar:-moz-window-inactive .titlebar-buttonbox:hover .titlebar-min,
+:root #TabsToolbar:-moz-window-inactive #TabsToolbar-min:hover {
+	background: var(--titlebar-minimize-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root[sizemode="maximized"] #TabsToolbar:-moz-window-inactive .titlebar-buttonbox:hover .titlebar-max,
+:root[sizemode="maximized"] #TabsToolbar:-moz-window-inactive #TabsToolbar-max:hover {
+	background: var(--titlebar-unmaximize-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+:root[inFullscreen] #window-controls #restore-button {
+	background: var(--titlebar-maximize-dark) no-repeat;
+	background-size: contain;
+}
+:root[inFullscreen] #window-controls #restore-button:hover {
+	background: var(--titlebar-unmaximize-hover-dark) no-repeat;
+	background-size: contain;
+}
+:root[inFullscreen] #window-controls #restore-button:active {
+	background: var(--titlebar-unmaximize-active-dark) no-repeat;
+	background-size: contain;
+}
+:root[inFullscreen] #window-controls:-moz-window-inactive #restore-button {
+	background: var(--titlebar-backdrop-dark) no-repeat;
+	background-size: contain;
+}
+}

@@ -7,7 +7,8 @@
 /* Incorporate Poseidon’s Sidebery-specific CSS */
 @import url("tweaks/sidebery.css");
 
-
+/* GlassFox UserContent.css */
+/*
 :root {
     --stacking-bg: rgba(0, 0, 0, .1);
     --content-bg: rgba(0, 0, 0, .2);
@@ -15,7 +16,7 @@
     --card-bg-dark: rgba(0, 0, 0, .4);
 }
 
-/* All Firefox pages */
+ /* All Firefox pages
 @-moz-document url-prefix("about:") {
     html, body {
         background: transparent !important;
@@ -54,14 +55,14 @@
     }
 }
 
-/* General styling */
+/* General styling
 
 html, body {
     border-radius: 8px !important;
     background: transparent !important;
 }
 
-/* imports */
+/* imports
 
 @-moz-document domain(compass.education) {
     html, body, form {
@@ -157,6 +158,7 @@ html, body {
     .sfbg {
         background-color: var(--card-bg) !important;
         /* backdrop-filter: blur(20px);         */
+/*
     }
     body, html, div#search > * {
         background-color: transparent !important;
@@ -285,3 +287,5 @@ html, body {
         }
     }
 }
+*/
+

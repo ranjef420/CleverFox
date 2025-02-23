@@ -1,8 +1,6 @@
 /* Posiedon */
 @import url("content/common.css");
 @import url("content/newtab.css");
-@import url("tweaks/sidebery.css") (-moz-bool-pref: "uc.tweak.theme.sidebery");
-@import url("sidebery/sidebery-theme.css") (-moz-bool-pref: "af.sidebery.edgyarc-theme");
 
 /* Incorporate Poseidon’s Sidebery-specific CSS */
 @import url("tweaks/sidebery.css");

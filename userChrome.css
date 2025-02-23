@@ -17,6 +17,7 @@
 @import url("core/buttons/replace-buttons.css");
 @import url("core/buttons/rounded-title-buttons.css");
 @import url("core/buttons/title-buttons.css");
+            /* @import url("src/neptune/userChome/neptune-buttons.css");
 
 /* Icons - All CSS files in directory must be merged and integrated into final 'icons.css'*/
 @import url("core/icons/icons.css");
@@ -54,7 +55,6 @@
 /*
 @import url("src/neptune/toolbox.css");
 @import url("src/neptune/userChome/neptune-TitleToolPersonal-bar.css");
-@import url("src/neptune/userChome/neptune-buttons.css");
 @import url("src/neptune/userChome/neptune-dialogs-browser-icons.css");
 @import url("src/neptune/userChome/neptune-hidden.css");
 @import url("src/neptune/userChome/neptune-navbar.css");

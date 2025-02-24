@@ -1,10 +1,3 @@
-/*
-Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/context_menus_more_proton.css made available under Mozilla Public License v. 2.0
-See the above repository for updates as well as full license text.
-*/
-
-/* Adds rounded corners to context menus and makes them follow your Firefox theme! */
-/* This is only going to work on Win10+ */
 
 /* Adjust the border radius of the context menus and panels here */
 panel, menupopup {
@@ -20,6 +13,16 @@ richlistbox {
 menupopup:not(.in-menulist) > menuitem,
 menupopup > menu {
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+}
+
+@media (-moz-bool-pref: "tweak.context-menu.hide-access-key") {
+  :where(menuitem, menu) > :is(.menu-text, .menu-iconic-text)[value]:not([value=""]) {
+    &::before {
+      /* The default value is -moz-label-content, which takes the data from the
+       * value attribute and highlights the character found in the accesskey
+       * attribute. This skips that and uses the value attribute directly. */
+      content: attr(value) !important;
+    }
 }
 
 /* THEMING */

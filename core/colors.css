@@ -96,7 +96,7 @@
     --in-content-page-color: var(--arrowpanel-color) !important;
     /* Primary button */
     --in-content-primary-button-text-color: var(--button-primary-color) !important;
-    --in-content-primary-button-background: var(--button-primary-bgcolor) !important;
+    --in-content-primary-button-background: var (--button-primary-bgcolor) !important;
     --in-content-primary-button-background-hover: var(--button-primary-hover-bgcolor) !important;
     --in-content-primary-button-background-active: var(--button-primary-active-bgcolor) !important;
     /* Secondary button */
@@ -289,7 +289,7 @@
     --toolbar-field-focus-border-color: light-dark(color-mix(in srgb, var(--focus-outline-color) 50%, transparent), var(--focus-outline-color)) !important;
     --urlbar-box-bgcolor: var(--button-bgcolor) !important;
     --urlbar-box-hover-bgcolor: var(--button-hover-bgcolor) !important;
-    --urlbar-box-active-bgcolor: var(--button-active-bgcolor) !important;
+    --urlbar-box-active-bgcolor: var (--button-active-bgcolor) !important;
     /* URL bar suggestions. */
     --link-color: var(--uc-accent-adjusted) !important;
     --uc-urlbarView-accent-color: var(--uc-accent-adjusted) !important;

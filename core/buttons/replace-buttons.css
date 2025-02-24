@@ -67,10 +67,6 @@
 	text-align: left !important;
 }
 
-.subviewbutton.panel-subview-footer label {
-	text-align: center !important;
-}
-
 /* --- Drop down buttons --- */
 #sidebar-switcher-target,
 #viewButton {
@@ -590,4 +586,50 @@ menulist {
 }
 #identity-box[pageproxystate="valid"].chromeUI{
 	padding: 2px 0 !important;
+}
+
+/* Merge Shimmer's compact findbar into Poseidon's toolbar setup */
+.findbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: var(--neptune-toolbar-background);
+  border: 1px solid var(--neptune-toolbar-border-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--neptune-small-shadow);
+}
+
+/* Ensure Arc's findbar dynamic behavior remains intact */
+.findbar-container[hidden] {
+  display: none !important;
+}
+
+.findbar-container[focused] {
+  outline: 2px solid var(--neptune-input-outline-color);
+  outline-offset: -2px;
+}
+
+/* Align additional tweaks with Neptune's styling */
+.findbar-container .findbar-find-previous,
+.findbar-container .findbar-find-next,
+.findbar-container .findbar-closebutton {
+  background-color: var(--neptune-item-background);
+  border: 1px solid var(--neptune-item-border-color);
+  border-radius: var(--border-radius-small);
+  padding: 2px 6px;
+  margin: 0 2px;
+  transition: background-color 0.2s ease;
+}
+
+.findbar-container .findbar-find-previous:hover,
+.findbar-container .findbar-find-next:hover,
+.findbar-container .findbar-closebutton:hover {
+  background-color: var(--neptune-item-hover-background);
+}
+
+.findbar-container .findbar-find-previous:active,
+.findbar-container .findbar-find-next:active,
+.findbar-container .findbar-closebutton:active {
+  background-color: var(--neptune-item-active-background);
 }

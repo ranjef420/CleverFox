@@ -507,3 +507,39 @@ treechildren::-moz-tree-cell-text(selected) {
 	border-radius: 0 !important;
 	box-shadow: none !important;
 }
+
+/* === Remove the Ugly === */
+/* Remove Border Below Sidebery "Tabs" Text  */
+#sidebar-header {
+  border-bottom: 0 !important;
+}
+
+@media (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+  :root:not([chromehidden*="menubar toolbar directories extrachrome"]):not([inDOMFullscreen]) #tabbrowser-tabbox, :root:not([inDOMFullscreen]) #sidebar-main {
+    margin-bottom: var(--shimmer-top-bottom-browser-margin) !important;
+  }
+}
+@media not (-moz-bool-pref: "shimmer.native-vertical-tabs") {
+  :root:not([chromehidden*="menubar toolbar directories extrachrome"]):not([inDOMFullscreen]) #sidebar-box:not([hidden]), :root:not([inDOMFullscreen]) #sidebar-box:not([hidden]) ~ #tabbrowser-tabbox {
+    margin-bottom: var(--shimmer-top-bottom-browser-margin) !important;
+  }
+}
+
+#sidebar-splitter {
+  --sidebar-splitter: var(--shimmer-sidebar-splitter-width) !important;
+  width: var(--sidebar-splitter) !important;
+  min-width: var(--sidebar-splitter) !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0 !important;
+  margin: 0 !important;
+}
+
+@media not (-moz-bool-pref: "shimmer.show-sidebar-header-close-button") {
+  #sidebar-close {
+    display: none !important;
+  }
+}
+
+#sidebar-close {
+  margin-right: 10px !important;
+}

@@ -36,6 +36,15 @@
     }
    }
 
+/* === Extension Buttons Height Match Navbar === */
+#nav-bar-customization-target toolbarbutton {
+	height: 100% !important;
+}
+
+#urlbar {
+	margin: 0 !important;
+}
+
 /* Decrease navbar buttons and URL when browser window is inactive.  */
 #nav-bar.browser-toolbar .toolbarbutton-icon { &:-moz-window-inactive {opacity: 0.5 !important;} }
 #titlebar .titlebar-buttonbox-container .titlebar-buttonbox { &:-moz-window-inactive {opacity: 0.5 !important;} }

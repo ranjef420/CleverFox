@@ -724,3 +724,34 @@ dialog {
     outline-offset: -2px !important;
   }
 }
+
+/* Integrate mac-based translucency and system designs into Poseidon's tab bar, side panel, and menus */
+:root {
+  --panel-background: color-mix(in srgb, var(--lwt-accent-color) 70%, transparent);
+  --panel-border-color: color-mix(in srgb, var(--lwt-accent-color) 50%, transparent);
+  --panel-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --panel-item-hover-bgcolor: color-mix(in srgb, var(--lwt-accent-color) 80%, transparent);
+  --panel-item-active-bgcolor: color-mix(in srgb, var(--lwt-accent-color) 90%, transparent);
+}
+
+/* Adjust color themes and variables to ensure smooth integration with macOS effects */
+.panel-subview-body {
+  background-color: var(--panel-background) !important;
+  border: 1px solid var(--panel-border-color) !important;
+  box-shadow: var(--panel-shadow) !important;
+}
+
+.panel-subview-body > .subviewbutton {
+  background-color: transparent !important;
+  border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+  padding: var(--arrowpanel-menuitem-padding-block) var(--arrowpanel-menuitem-padding-inline) !important;
+  margin: var(--arrowpanel-menuitem-margin) !important;
+}
+
+.panel-subview-body > .subviewbutton:hover {
+  background-color: var(--panel-item-hover-bgcolor) !important;
+}
+
+.panel-subview-body > .subviewbutton:active {
+  background-color: var(--panel-item-active-bgcolor) !important;
+}
